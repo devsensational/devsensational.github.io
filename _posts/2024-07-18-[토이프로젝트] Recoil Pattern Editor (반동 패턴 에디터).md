@@ -1,6 +1,6 @@
 ---
 title: "[토이프로젝트] Recoil Pattern Editor (반동 패턴 에디터)"
-description: "해당 프로젝트는 "TPS프로젝트"의 반동 패턴을 쉽게 생성/수정하고, 스크립트화 하는 것을 목적으로 시작되었습니다.Recoil Pattern Editor는 Unity에서 동작하며, 누구나 쉽게 반동 패턴을 수정하고 스크립트화 할 수 있도록 하는 것이 목적입니다."
+description: "해당 프로젝트는 'TPS프로젝트'의 반동 패턴을 쉽게 생성/수정하고, 스크립트화 하는 것을 목적으로 시작되었습니다.Recoil Pattern Editor는 Unity에서 동작하며, 누구나 쉽게 반동 패턴을 수정하고 스크립트화 할 수 있도록 하는 것이 목적입니다."
 date: 2024-07-18T08:54:26.976Z
 tags: ["C#","Unity","토이프로젝트"]
 thumbnail: /assets/images/old/7d60611f-c2e5-4f05-827d-963480f7e1df-image.png

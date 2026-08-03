@@ -3,7 +3,8 @@ title: "[Project CM] 프로젝트 시작"
 description: "'엘든 링 밤의 통치자'의 전투 스타일을 레퍼런스로 한 PvPvE 게임을 개발하는 프로젝트 입니다."
 date: 2025-10-28T11:36:28.185Z
 tags: ["Project CM","UE5"]
-thumbnail: /assets/images/old/5084e409-08b3-4e0c-b210-363277ebfb13-image.png
+image:
+  path: /assets/images/old/5084e409-08b3-4e0c-b210-363277ebfb13-image.png
 categories: [Project CM + Project Arc]
 ---
 ![](/assets/images/old/5084e409-08b3-4e0c-b210-363277ebfb13-image.png)

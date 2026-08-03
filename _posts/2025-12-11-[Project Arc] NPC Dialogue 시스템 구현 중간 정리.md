@@ -3,7 +3,8 @@ title: "[Project Arc] NPC Dialogue 시스템 구현 중간 정리"
 description: "NPC Dialogue 시스템을 구현 중간 정리를 요약했습니다."
 date: 2025-12-11T14:39:36.497Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/df5ac9b8-cd73-4ff7-82ae-dd07fcc4568b-image.png
+image:
+  path: /assets/images/old/df5ac9b8-cd73-4ff7-82ae-dd07fcc4568b-image.png
 categories: [Project CM + Project Arc]
 ---
 ## 목표

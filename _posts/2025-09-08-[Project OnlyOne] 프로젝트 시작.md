@@ -3,7 +3,8 @@ title: "[Project OnlyOne] 프로젝트 시작"
 description: " Last Man Standing 스타일의 술래잡기 프로젝트를 시작합니다."
 date: 2025-09-08T11:30:47.442Z
 tags: ["Project OnlyOne","UE5"]
-thumbnail: /assets/images/old/2216c896-cabf-47ff-9d1a-5d3aaed2cf6d-image.png
+image:
+  path: /assets/images/old/2216c896-cabf-47ff-9d1a-5d3aaed2cf6d-image.png
 categories: [Project OnlyOne]
 ---
 # 프로젝트 요약

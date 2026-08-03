@@ -3,7 +3,8 @@ title: "[Project CM] 파티가 매치메이킹에 등록하고, 게임 세션을
 description: "이번 작업에서는 로비에서 팀 전원이 Ready 상태가 되면 매치메이킹 큐에 팀을 올리고, 큐에 쌓인 팀 수가 임계치에 도달하면 GameSession을 시작하도록 서버 주도 로직을 직접 구현했습니다."
 date: 2025-11-04T10:53:18.010Z
 tags: ["Project CM","UE5"]
-thumbnail: /assets/images/old/e69471a6-ee1f-403b-945d-c5c2a8c83995-image.png
+image:
+  path: /assets/images/old/e69471a6-ee1f-403b-945d-c5c2a8c83995-image.png
 categories: [Project CM + Project Arc]
 ---
 이번 작업에서는 로비에서 팀 전원이 Ready 상태가 되면 매치메이킹 큐에 팀을 올리고, 큐에 쌓인 팀 수가 임계치에 도달하면 GameSession을 시작하도록 서버 주도 로직을 직접 구현했습니다. 

@@ -3,7 +3,8 @@ title: "[C++/CS] 해시 충돌이 발생하는 key 값이 자신의 value를 찾
 description: "해시 충돌 발생 시 동일한 해시로 원하는 값을 찾아가는 과정과 unordered_map의 내부 동작 원리 분석 + 캐시 효율성에 대한 궁금증 해결"
 date: 2026-07-22T11:10:05.529Z
 tags: ["Computer Science","C++"]
-thumbnail: /assets/images/old/99c9c44c-e143-41c8-b653-8c77af4c5953-image.png
+image:
+  path: /assets/images/old/99c9c44c-e143-41c8-b653-8c77af4c5953-image.png
 categories: [C++]
 ---
 ### 라이선스 표기

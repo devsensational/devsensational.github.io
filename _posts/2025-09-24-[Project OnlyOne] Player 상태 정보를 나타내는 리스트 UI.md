@@ -3,7 +3,8 @@ title: "[Project OnlyOne] Player 상태 정보를 나타내는 리스트 UI"
 description: "플레이어들의 닉네임/생존 여부/킬 수를 UI 목록으로 표시하고, 게임 로직 변화에 따라 UI를 느슨 결합으로 갱신하는 것이 목표입니다."
 date: 2025-09-24T11:15:18.826Z
 tags: ["Project OnlyOne","UE5"]
-thumbnail: /assets/images/old/b5f5337b-09db-4a3e-9e8c-55ab9daa8a9c-image.webp
+image:
+  path: /assets/images/old/b5f5337b-09db-4a3e-9e8c-55ab9daa8a9c-image.webp
 categories: [Project OnlyOne]
 ---
 ![](/assets/images/old/b5f5337b-09db-4a3e-9e8c-55ab9daa8a9c-image.webp)

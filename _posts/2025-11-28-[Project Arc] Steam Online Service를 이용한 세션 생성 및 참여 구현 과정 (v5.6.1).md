@@ -3,7 +3,8 @@ title: "[Project Arc] Steam Online Service를 이용한 세션 생성 및 참여
 description: "Steam Online Subsystem을 사용해 친구 초대 및 멀티플레이 기능을 구현하던 중, 세션 생성과 참가(JoinSession)는 정상적으로 콜백이 오는데 실제로는 접속이 되지 않는 문제가 발생하였습니다."
 date: 2025-11-28T05:23:48.310Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/e9e53c93-23a5-409c-ba62-4c341aab70eb-image.png
+image:
+  path: /assets/images/old/e9e53c93-23a5-409c-ba62-4c341aab70eb-image.png
 categories: [Project CM + Project Arc]
 ---
 Steam Online Subsystem을 사용해 친구 초대 및 멀티플레이 기능을 구현하던 중, 세션 생성과 참가(JoinSession)는 정상적으로 콜백이 오는데 실제로는 접속이 되지 않는 문제가 발생하였습니다. 특히 `NetworkDriver` 생성 실패, `Listen` 서버 생성 실패, P2P 연결 타임아웃 등 다양한 로그 메시지가 출력되면서 원인을 추적하는 데 많은 시간이 걸렸습니다.

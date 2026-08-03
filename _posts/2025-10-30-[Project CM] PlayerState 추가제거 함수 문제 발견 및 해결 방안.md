@@ -3,7 +3,8 @@ title: "[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 �
 description: "로비에 접속 중인 플레이어 목록을 GameState에서 관리하기 위해 AddPlayerState와 RemovePlayerState를 오버라이드했지만, 실제로 호출되지 않았던 문제를 분석하고 해결했습니다."
 date: 2025-10-30T09:04:51.778Z
 tags: ["Project CM","UE5","트러블슈팅"]
-thumbnail: /assets/images/old/7e09ef98-acf9-4b3b-a753-49c38cb7c318-image.png
+image:
+  path: /assets/images/old/7e09ef98-acf9-4b3b-a753-49c38cb7c318-image.png
 ---
 오늘은 로비에 접속 중인 플레이어 목록을 GameState에서 관리하기 위해 AddPlayerState와 RemovePlayerState를 오버라이드했지만, 실제로 호출되지 않았던 문제를 분석하고,
 이를 GameMode의 PostLogin / Logout으로 대체하여 안정적으로 처리한 과정을 정리했습니다.

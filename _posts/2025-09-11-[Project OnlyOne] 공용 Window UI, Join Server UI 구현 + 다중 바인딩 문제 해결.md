@@ -3,7 +3,8 @@ title: "[Project OnlyOne] 공용 Window UI, Join Server UI 구현 + 다중 바�
 description: "윈도우 형 UI를 위한 공용 Window UI WBP, 서버에 접속할 때 필요한 정보를 적을 수 있는 UI를 구현했습니다."
 date: 2025-09-11T10:29:04.623Z
 tags: ["Project OnlyOne","UE5","트러블슈팅"]
-thumbnail: /assets/images/old/3b7c77d4-66fc-46a2-8122-56148b7cf5d9-image.webp
+image:
+  path: /assets/images/old/3b7c77d4-66fc-46a2-8122-56148b7cf5d9-image.webp
 categories: [Project OnlyOne]
 ---
 ![](/assets/images/old/3b7c77d4-66fc-46a2-8122-56148b7cf5d9-image.webp)

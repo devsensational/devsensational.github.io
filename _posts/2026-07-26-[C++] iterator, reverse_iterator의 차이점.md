@@ -3,7 +3,8 @@ title: "[C++] iterator, reverse_iterator의 차이점"
 description: "iterator, reverse_iterator의 차이점에 대해 알아봤습니다"
 date: 2026-07-26T09:29:10.269Z
 tags: ["C++"]
-thumbnail: /assets/images/old/0b2670e3-e473-479f-88a7-d1b4729f633f-image.png
+image:
+  path: /assets/images/old/0b2670e3-e473-479f-88a7-d1b4729f633f-image.png
 categories: [C++]
 ---
 ### 라이선스 표기

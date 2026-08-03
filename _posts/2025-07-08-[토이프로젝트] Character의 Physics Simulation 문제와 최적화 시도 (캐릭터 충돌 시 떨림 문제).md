@@ -3,7 +3,8 @@ title: "[토이프로젝트] Character의 Physics Simulation 문제와 최적화
 description: "언리얼에서 제공하는 Character Movement 클래스를 사용한 액터가 다른 액터와 부딪히면 위 영상과 같이 캐릭터가 떨리는 문제가 발생합니다."
 date: 2025-07-08T10:13:14.122Z
 tags: ["UE5","토이프로젝트"]
-thumbnail: /assets/images/old/62ed1635-8f03-44ea-8312-a77073fd20a4-image.webp
+image:
+  path: /assets/images/old/62ed1635-8f03-44ea-8312-a77073fd20a4-image.webp
 ---
 # 문제 발생과 원인
 ![](/assets/images/old/62ed1635-8f03-44ea-8312-a77073fd20a4-image.webp)

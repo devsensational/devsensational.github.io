@@ -3,7 +3,8 @@ title: "[Project Arc] 데이터 기반 Procedural Map Generator + 레벨 스트�
 description: "이번 글에서는 구현한 자동 맵 생성(MapGenerate) 로직과, 생성된 맵 구조에 맞춰 서브 레벨을 동적으로 로드하는 레벨 스트리밍 구조를 정리해 보겠습니다."
 date: 2025-11-19T09:59:10.876Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/3a5351f0-1a0a-4867-b5c2-57866de3efc0-image.png
+image:
+  path: /assets/images/old/3a5351f0-1a0a-4867-b5c2-57866de3efc0-image.png
 categories: [Project CM + Project Arc]
 ---
 이번 글에서는 구현한 자동 맵 생성(MapGenerate) 로직과, 생성된 맵 구조에 맞춰 서브 레벨을 동적으로 로드하는 레벨 스트리밍 구조를 정리해 보겠습니다. 특히 어떤 알고리즘으로 방(Room) 그래프를 만들었는지, 그 그래프를 어떻게 실제 월드 좌표에 배치했는지, 그리고 `ACMRoom`과 스트리밍 레벨을 어떻게 연결했는지 위주로 기술해 보겠습니다.

@@ -3,7 +3,8 @@ title: "[Lyra 코드 분석] LyraGameState"
 description: "LyraGameState를 알아보고, 클라이언트에서 게임을 초기화하는 흐름을 알아보겠습니다."
 date: 2025-06-16T11:46:58.104Z
 tags: ["UE5","코드분석"]
-thumbnail: /assets/images/old/06e84640-dfbc-4113-8e14-38ba1a8c7557-image.png
+image:
+  path: /assets/images/old/06e84640-dfbc-4113-8e14-38ba1a8c7557-image.png
 ---
 저번 글에서는 Experience가 무슨 개념인지, 서버에서 게임을 초기화하는 과정이 어떻게 흘러가는지 알아보았습니다. 이번에는 LyraGameState를 알아보고, 클라이언트에서 게임을 초기화하는 흐름을 알아보겠습니다.
 

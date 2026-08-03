@@ -3,7 +3,8 @@ title: "[Project Arc] Seamless Travel 시 ISM과 Raytracing 충돌 문제 해결
 description: "프로젝트에 레이트레이싱을 적용한 뒤, 심리스 트래블 시 Instanced Static Mesh(ISM) 때문에 발생하던 크래시를 추적하고 해결한 과정을 정리해 두려고 합니다."
 date: 2026-01-12T07:13:29.961Z
 tags: ["Project ARC","UE5","트러블슈팅"]
-thumbnail: /assets/images/old/477dc0db-f45c-4834-acee-96837f0b17b8-image.png
+image:
+  path: /assets/images/old/477dc0db-f45c-4834-acee-96837f0b17b8-image.png
 categories: [Project CM + Project Arc]
 ---
 프로젝트에 레이트레이싱을 적용한 뒤, **심리스 트래블 시 Instanced Static Mesh(ISM) 때문에 발생하던 크래시**를 추적하고 해결한 과정을 정리해 두려고 합니다. 동일한 구조의 네트워크/멀티플레이 프로젝트에서 레이트레이싱을 켜면 비슷한 문제를 겪을 수 있기 때문에, 원인과 대응 패턴을 기억해 두면 좋겠다는 생각이 들었습니다.

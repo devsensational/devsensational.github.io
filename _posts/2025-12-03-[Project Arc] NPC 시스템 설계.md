@@ -3,7 +3,8 @@ title: "[Project Arc] NPC 시스템 설계"
 description: "오늘은 ACMNpcBase를 중심으로, 다양한 NPC 기능(대화, 퀘스트, 상점 등)을 컴포넌트 기반으로 확장할 수 있는 구조를 설계하였습니다."
 date: 2025-12-03T10:35:29.064Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/938aac1a-a10e-416f-965c-be1f28178dbb-image.png
+image:
+  path: /assets/images/old/938aac1a-a10e-416f-965c-be1f28178dbb-image.png
 categories: [Project CM + Project Arc]
 ---
 오늘은 `ACMNpcBase`를 중심으로, 다양한 NPC 기능(대화, 퀘스트, 상점 등)을 **컴포넌트 기반**으로 확장할 수 있는 구조를 설계하였습니다. 이 구조를 통해 이후 요구사항 변화에 유연하게 대응할 수 있도록 확장성과 유지보수성을 고려한 아키텍처를 목표로 하였습니다.

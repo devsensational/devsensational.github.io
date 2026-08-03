@@ -3,7 +3,8 @@ title: "[Memory] Image 영역?"
 description: "메모리 분석 유틸리티 중 하나인 VMmap에 대해 알게되어 사용하게 되었습니다. 그런데 제가 아는 것과는 다른 부분이 몇 가지 존재하여 블로그에 정리하게 되었습니다."
 date: 2025-12-08T11:27:45.929Z
 tags: ["메모리"]
-thumbnail: /assets/images/old/8ffb3203-c383-4aac-abe9-ac4ab288707e-image.png
+image:
+  path: /assets/images/old/8ffb3203-c383-4aac-abe9-ac4ab288707e-image.png
 ---
 메모리 분석 유틸리티 중 하나인 VMmap에 대해 알게되어 사용하게 되었습니다. 그런데 제가 아는 것과는 다른 부분이 몇 가지 존재하여 블로그에 정리하게 되었습니다.
 

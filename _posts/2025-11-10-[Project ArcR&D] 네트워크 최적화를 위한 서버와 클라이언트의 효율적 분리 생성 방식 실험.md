@@ -3,7 +3,8 @@ title: "[Project Arc/R&D] 네트워크 최적화를 위한 서버와 클라이�
 description: "이번 실험에서는 Seed를 활용하여 서버와 클라이언트가 각자의 환경에서 동일한 지형을 독립적으로 생성하는 구조가 가능한지 검증하고자 합니다."
 date: 2025-11-10T05:13:52.174Z
 tags: ["Project ARC","UE5","R&D"]
-thumbnail: /assets/images/old/78085532-df04-43b0-80b8-8c04d44bc06e-image.png
+image:
+  path: /assets/images/old/78085532-df04-43b0-80b8-8c04d44bc06e-image.png
 categories: [Project CM + Project Arc]
 ---
 랜덤 기반의 지형을 생성하는 시스템을 구현할 때 가장 먼저 고려해야 하는 것은 서버와 클라이언트 간의 동기화 방식입니다. 기존의 대부분 게임은 지형이 사전에 제작되어 있기 때문에, 서버와 클라이언트가 동일한 지형 데이터를 공유하며 단순히 이를 메모리에 불러오는 것만으로 문제가 해결됩니다.

@@ -3,7 +3,8 @@ title: "[Project Arc] NPC Dialogue & Action 시스템 1차 구현 완료"
 description: "이번 작업에서는 CrimsonMoon 프로젝트에 NPC 대화(Npc Dialogue) 시스템을 1차적으로 구현하고, 위젯/액터/게임 인스턴스/로컬 이벤트 매니저 간의 구조를 정리하여 구현하였습니다."
 date: 2025-12-12T11:42:19.112Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/545204d6-1e33-4a75-8639-caa08ec17f7a-image.webp
+image:
+  path: /assets/images/old/545204d6-1e33-4a75-8639-caa08ec17f7a-image.webp
 categories: [Project CM + Project Arc]
 ---
 이번 작업에서는 CrimsonMoon 프로젝트에 NPC 대화(Npc Dialogue) 시스템을 1차적으로 구현하고, 위젯/액터/게임 인스턴스/로컬 이벤트 매니저 간의 구조를 정리하여 구현하였습니다. 특히, C++과 UMG를 섞어 쓰는 환경에서 **델리게이트 기반 이벤트 흐름**과 **위젯/액터 간 의존성 최소화**를 목표로 진행했습니다.

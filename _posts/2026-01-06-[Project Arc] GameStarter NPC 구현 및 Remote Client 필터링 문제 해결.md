@@ -3,7 +3,8 @@ title: "[Project Arc] GameStarter NPC 구현 및 Remote Client 필터링 문제 
 description: "이번에는 멀티플레이 환경에서 게임 시작용 NPC(GameStarter NPC) 를 구현하고, 발생한 문제를 해결했습니다."
 date: 2026-01-06T10:29:33.119Z
 tags: ["Project ARC","UE5","트러블슈팅"]
-thumbnail: /assets/images/old/4d39ae82-62ca-4775-82b5-3d051a9b1f04-image.webp
+image:
+  path: /assets/images/old/4d39ae82-62ca-4775-82b5-3d051a9b1f04-image.webp
 categories: [Project CM + Project Arc]
 ---
 이번에는 멀티플레이 환경에서 **게임 시작용 NPC(GameStarter NPC)** 를 구현하고, 발생한 문제를 해결했습니다.

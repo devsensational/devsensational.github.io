@@ -3,7 +3,8 @@ title: "[C++/CS] Deadlock 문제"
 description: "데드락(Deadlock)은 두 개 이상의 프로세스나 스레드가 서로가 보유한 자원을 기다리면서 영원히 대기 상태에 빠지는 문제를 의미합니다. 즉, 서로가 서로를 기다리기 때문에 아무도 앞으로 진행하지 못하는 상태라고 볼 수 있습니다."
 date: 2025-11-18T11:29:13.615Z
 tags: ["Computer Science","C++"]
-thumbnail: /assets/images/old/4bcffb8e-8047-44ff-a8e1-6db481a46fb4-image.png
+image:
+  path: /assets/images/old/4bcffb8e-8047-44ff-a8e1-6db481a46fb4-image.png
 categories: [C++]
 ---
 데드락(Deadlock)은 두 개 이상의 프로세스나 스레드가 서로가 보유한 자원을 기다리면서 **영원히 대기 상태에 빠지는 문제**를 의미합니다. 즉, **서로가 서로를 기다리기 때문에 아무도 앞으로 진행하지 못하는 상태**라고 볼 수 있습니다. 

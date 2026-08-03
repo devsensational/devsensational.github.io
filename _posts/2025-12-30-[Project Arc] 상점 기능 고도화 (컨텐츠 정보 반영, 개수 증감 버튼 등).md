@@ -3,7 +3,8 @@ title: "[Project Arc] 상점 기능 고도화 (컨텐츠 정보 반영, 개수 �
 description: "오늘은 프로젝트에서 Shop UI를 구현하고, 특히 상점 리스트에서 아이템을 선택했을 때 상세 패널에 정보가 반영되는 흐름과 아이템 수량(Quantity) 증감 UI를 중심으로 작업을 진행하였습니다."
 date: 2025-12-30T11:31:07.733Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/7dd659b9-5083-43de-9fd3-bc26c0d3051d-image.webp
+image:
+  path: /assets/images/old/7dd659b9-5083-43de-9fd3-bc26c0d3051d-image.webp
 categories: [Project CM + Project Arc]
 ---
 오늘은 프로젝트에서 Shop UI를 구현하고, 특히 **상점 리스트에서 아이템을 선택했을 때 상세 패널에 정보가 반영되는 흐름**과 **아이템 수량(Quantity) 증감 UI**를 중심으로 작업을 진행하였습니다. 또한 상점 UI를 여는 과정에서 **PlayerController–NPC–ShopComponent** 사이의 통신 구조를 다시 정리하고, 이를 코드 레벨에서 점검하는 시간을 가졌습니다.

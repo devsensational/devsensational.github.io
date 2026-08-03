@@ -3,7 +3,8 @@ title: "[수학/알고리즘] Cramer's Rule, determinant "
 description: "교점을 찾은 후 출력하는 문제를 해결하기 위해 크래머 공식과 행렬식을 공부했습니다"
 date: 2026-07-23T09:29:08.122Z
 tags: ["C++","수학","알고리즘"]
-thumbnail: /assets/images/old/9289d454-e34a-484a-8016-03f6519cd2a7-image.png
+image:
+  path: /assets/images/old/9289d454-e34a-484a-8016-03f6519cd2a7-image.png
 ---
 > 교점에 별 만들기
 https://school.programmers.co.kr/learn/courses/30/lessons/87377

@@ -3,7 +3,8 @@ title: "[Lyra 코드 분석] Experience와 게임 초기화 흐름"
 description: "Lyra 프로젝트는 Epic Games에서 공식적으로 제공하는 멀티플레이어 슈팅 게임 템플릿으로, 최신 언리얼 엔진 5의 구조와 기능을 실제 게임에 어떻게 적용하는지 잘 보여줍니다."
 date: 2025-06-04T11:31:33.719Z
 tags: ["UE5","코드분석"]
-thumbnail: /assets/images/old/cba3ea5a-5013-4b18-bc20-b928b010ebf5-image.png
+image:
+  path: /assets/images/old/cba3ea5a-5013-4b18-bc20-b928b010ebf5-image.png
 ---
 ![](/assets/images/old/cba3ea5a-5013-4b18-bc20-b928b010ebf5-image.png)
 

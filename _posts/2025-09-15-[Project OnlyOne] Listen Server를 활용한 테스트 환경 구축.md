@@ -3,7 +3,8 @@ title: "[Project OnlyOne] Listen Server를 활용한 테스트 환경 구축"
 description: "해당 프로젝트는 Dedicated Server를 사용할 것이기 때문에, 테스트가 필요할 때 마다 패키징을 해야 했습니다. 자동화된 패키징 환경이 구축되어 있지 않기 때문에 생산성에 큰 문제를 야기했습니다."
 date: 2025-09-15T11:38:25.610Z
 tags: ["Project OnlyOne","UE5"]
-thumbnail: /assets/images/old/f212b4f4-f6d6-4fbf-81a6-4f0fea582564-image.webp
+image:
+  path: /assets/images/old/f212b4f4-f6d6-4fbf-81a6-4f0fea582564-image.webp
 categories: [Project OnlyOne]
 ---
 ![](/assets/images/old/f212b4f4-f6d6-4fbf-81a6-4f0fea582564-image.webp)

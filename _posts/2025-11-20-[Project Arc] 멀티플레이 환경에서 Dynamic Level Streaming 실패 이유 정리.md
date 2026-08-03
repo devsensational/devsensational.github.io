@@ -3,7 +3,8 @@ title: "[Project Arc] 멀티플레이 환경에서 Dynamic Level Streaming 실�
 description: "Room 단위로 서브 레벨을 스트리밍하여 맵을 동적으로 구성하는 기능을 구현하는 과정에서, 싱글 플레이와 리슨 서버 환경에서는 정상적으로 동작하지만, 두 번째 클라이언트 접속 시 MissingLevelPackage 오류와 함께 접속이 끊어지는 문제가 발생했습니다."
 date: 2025-11-20T11:24:09.262Z
 tags: ["Project ARC","UE5"]
-thumbnail: /assets/images/old/bfd1cd30-0122-4c40-a1fe-f8ea90ee07ec-image.png
+image:
+  path: /assets/images/old/bfd1cd30-0122-4c40-a1fe-f8ea90ee07ec-image.png
 categories: [Project CM + Project Arc]
 ---
 Room 단위로 서브 레벨을 스트리밍하여 맵을 동적으로 구성하는 기능을 구현하는 과정에서, 싱글 플레이와 리슨 서버 환경에서는 정상적으로 동작하지만, 두 번째 클라이언트 접속 시 `MissingLevelPackage` 오류와 함께 접속이 끊어지는 문제가 발생했습니다. 이 TIL에서는 해당 문제가 발생한 원인과, 언리얼 엔진의 레벨 스트리밍·네트워크 동기화 구조를 정리하여, 앞으로 같은 실수를 반복하지 않기 위한 기록을 남기고자 합니다.

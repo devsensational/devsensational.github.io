@@ -3,7 +3,8 @@ title: "[Project Arc] 네트워크 환경에서 플레이어 카메라 Activate 
 description: "오늘은 언리얼 멀티플레이 환경에서 플레이어 카메라 시점이 보이지 않는 문제를 Activate로 해결한 과정과, 아직 남아 있는 카메라 회전(Input_Look) 문제를 원인 중심으로 정리하고자 합니다."
 date: 2026-01-07T12:30:39.428Z
 tags: ["Project ARC","UE5","트러블슈팅"]
-thumbnail: /assets/images/old/6c9f5fa7-c534-46a0-9baf-79f964759010-image.webp
+image:
+  path: /assets/images/old/6c9f5fa7-c534-46a0-9baf-79f964759010-image.webp
 categories: [Project CM + Project Arc]
 ---
 ![](/assets/images/old/6c9f5fa7-c534-46a0-9baf-79f964759010-image.webp)

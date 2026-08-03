@@ -3,7 +3,8 @@ title: "[TPS프로젝트] (1) Player character movement와 Camera"
 description: "3인칭 백뷰 방식의 시점은 Unity에서 어떻게 구현할 수 있을까요? 플레이어 캐릭터의 움직임은 어떻게 구현하며 어떻게 유동적으로 할당 키를 변경할 수 있을까요?"
 date: 2024-05-31T14:41:20.181Z
 tags: ["C#","Unity"]
-thumbnail: /assets/images/old/c87b9a2c-2c10-454c-a94e-95d82c42b777-image.webp
+image:
+  path: /assets/images/old/c87b9a2c-2c10-454c-a94e-95d82c42b777-image.webp
 categories: [TPSProject]
 ---
 ![](/assets/images/old/51647036-16d8-46c8-9f88-5cd0c98eb514-image.webp)

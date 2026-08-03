@@ -2,7 +2,7 @@
 title: "[Project Escape] 전투 시스템 컴포넌트 생성 문제 해결"
 description: "컴포넌트가 생성 문제로 에러가 발생했습니다. 이를 해결하기 위한 과정을 확인해보세요."
 date: 2025-08-06T11:58:21.621Z
-tags: ["Project Escape","UE5","트러블슈팅"]
+tags: ["project escape","ue5","트러블슈팅"]
 image:
   path: /assets/images/old/0f3132d5-bfc6-436e-bfdc-3defa5bf8e9b-image.png
 ---

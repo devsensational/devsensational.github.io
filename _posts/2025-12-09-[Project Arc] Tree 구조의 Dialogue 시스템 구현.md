@@ -2,7 +2,7 @@
 title: "[Project Arc] Tree 구조의 Dialogue 시스템 구현"
 description: "이번 기능에서는 NPC가 단순히 한 줄 대사만 출력하는 수준을 넘어서, 트리 형태로 분기되는 대화 시스템을 직접 설계하고 구현해 보았습니다."
 date: 2025-12-09T11:35:04.796Z
-tags: ["Project ARC","UE5"]
+tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/9c16ca4f-1359-425b-aafd-43c3d0d40c59-image.png
 categories: [Project CM + Project Arc]

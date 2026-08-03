@@ -2,7 +2,7 @@
 title: "[Project Escape] 프로젝트 시작"
 description: "L4D같은 형식으로 진행하는 FPS 프로젝트를 시작합니다."
 date: 2025-08-01T10:27:08.334Z
-tags: ["Project Escape","UE5"]
+tags: ["project escape","ue5"]
 ---
 # 프로젝트 요약
 - **프로젝트 명:** Project Escape

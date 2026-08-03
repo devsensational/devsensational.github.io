@@ -2,7 +2,7 @@
 title: "[Project Escape] 인벤토리 시스템 "
 description: "이번에는 탄약, 회복아이템과 같은 가방에 저장할  수 있는 아이템을 위한 컴포넌트를 구현함으로써 유연성 있는 아이템 장착 및 사용 시스템을 구현 해보도록 하겠습니다."
 date: 2025-08-04T11:57:00.316Z
-tags: ["Project Escape","UE5"]
+tags: ["project escape","ue5"]
 image:
   path: /assets/images/old/f1243838-5164-47c8-968a-cc0c913d6f2a-image.webp
 ---

@@ -2,7 +2,7 @@
 title: "[UE5] Remote Procedure Call (RPC)"
 description: "RPC란, UFUNCTION에 네트워킹 플래그를 달아 네트워크 너머에서 함수가 실행되도록 하는 메커니즘입니다. 멀티플레이 게임을 만들 때 Server-Client간 통신을 간단하게 처리할 수 있게 만들어줍니다."
 date: 2025-08-29T10:47:56.627Z
-tags: ["UE5","C++"]
+tags: ["ue5","c++"]
 categories: [C++]
 ---
 RPC란, UFUNCTION에 네트워킹 플래그를 달아 네트워크 너머에서 함수가 실행되도록 하는 메커니즘입니다. 멀티플레이 게임을 만들 때 Server-Client간 통신을 간단하게 처리할 수 있게 만들어줍니다.

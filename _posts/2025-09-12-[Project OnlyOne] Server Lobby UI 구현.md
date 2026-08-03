@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Server Lobby UI 구현"
 description: "Unreal Engine 5 멀티플레이어 게임의 서버 로비 시스템에서 플레이어 관리 기능을 구현했습니다. 플레이어의 입장, 퇴장, 준비 상태 관리를 동적으로 처리하는 UI 입니다."
 date: 2025-09-12T11:45:49.189Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 categories: [Project OnlyOne]
 ---
 ![](/assets/images/old/550c39c5-2fd1-4454-826d-c2c3fe9e3961-image.webp)

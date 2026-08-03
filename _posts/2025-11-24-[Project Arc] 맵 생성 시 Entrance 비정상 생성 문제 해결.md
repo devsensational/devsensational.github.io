@@ -2,7 +2,7 @@
 title: "[Project Arc] 맵 생성 시 Entrance 비정상 생성 문제 해결"
 description: "이번 글에서는 Map Generator를 구현하면서, 방(Room) 경계에 배치되는 Entrance(문/통로)들이 비정상적으로 여러 개씩 생성되거나, 잘못된 방향에 배치되는 문제를 어떻게 추적하고 해결했는지 정리해 보겠습니다."
 date: 2025-11-24T09:58:46.678Z
-tags: ["Project ARC","UE5","트러블슈팅"]
+tags: ["project arc","ue5","트러블슈팅"]
 image:
   path: /assets/images/old/50898fc8-43e3-462e-a6b2-22cee65a5c51-image.png
 categories: [Project CM + Project Arc]

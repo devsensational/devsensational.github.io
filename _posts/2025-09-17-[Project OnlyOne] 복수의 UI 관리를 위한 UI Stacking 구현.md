@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] 복수의 UI 관리를 위한 UI Stacking 구현"
 description: "UI를 개발하다 보면 팝업, 모달, 서브메뉴가 겹겹이 뜨는 상황이 잦습니다. 사용자는 뒤로 가기(Back) 한 번으로 직전 화면으로 자연스럽게 돌아가길 기대하고, 개발자는 입력 차단과 포커스, 가시성, 수명을 일관되게 관리해야 합니다."
 date: 2025-09-17T11:19:49.981Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/19f3ae07-2c4f-440e-b5b5-65d73d9accad-image.webp
 categories: [Project OnlyOne]

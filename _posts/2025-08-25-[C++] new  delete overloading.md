@@ -2,7 +2,7 @@
 title: "[C++] new / delete overloading"
 description: "C++에서 객체를 동적으로 생성할 때 흔히 new와 delete 연산자를 사용합니다. 표면적으로는 malloc/free와 비슷해 보이지만, 실제 내부 동작은 훨씬 더 복잡하고 강력합니다."
 date: 2025-08-25T10:24:12.155Z
-tags: ["C++","메모리"]
+tags: ["c++","메모리"]
 categories: [C++]
 ---
 C++에서 객체를 동적으로 생성할 때 흔히 new와 delete 연산자를 사용합니다. 표면적으로는 malloc/free와 비슷해 보이지만, 실제 내부 동작은 훨씬 더 복잡하고 강력합니다.

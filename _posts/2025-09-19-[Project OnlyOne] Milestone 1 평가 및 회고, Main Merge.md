@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Milestone 1 평가 및 회고, Main Merge"
 description: "이번 프로젝트의 첫 번째 마일스톤을 마무리하며, 팀 전체가 함께 KPT(Keep, Problem, Try) 방식으로 회고를 진행했습니다."
 date: 2025-09-19T10:23:42.409Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/b587fd9f-4d5c-4db2-a2b7-fd04e99bee8f-image.png
 categories: [Project OnlyOne]

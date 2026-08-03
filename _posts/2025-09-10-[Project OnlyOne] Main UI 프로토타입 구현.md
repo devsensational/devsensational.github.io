@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Main UI 프로토타입 구현"
 description: "게임의 메인 화면에서 사용될 UI의 프로토타입을 구현하였습니다. 버튼 애니메이션을 재사용하기 위해 커스텀 버튼 클래스를 구현해 사용했습니다."
 date: 2025-09-10T10:57:45.148Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/0cc192a0-e281-4e2c-b4aa-816d0a307bea-image.webp
 categories: [Project OnlyOne]

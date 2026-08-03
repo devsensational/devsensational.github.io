@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Player State List UI의 동기화 문제 해결"
 description: "Player State List는 'Tab'키를 누르면 해당 세션에 참가 중인 플레이어들의 생존 상태의 킬 스코어를 알려주는 UI입니다. 구현 후 실제 게임에 적용해보니, 인스턴스 초기화 시점과 Player State 동기화 시점이 달라 문제가 발생했습니다."
 date: 2025-09-29T09:50:50.752Z
-tags: ["Project OnlyOne","UE5","트러블슈팅"]
+tags: ["project onlyone","ue5","트러블슈팅"]
 image:
   path: /assets/images/old/de92ec30-ec9b-42f0-941f-8824ac2749ca-image.png
 categories: [Project OnlyOne]

@@ -2,7 +2,7 @@
 title: "[Project Arc] 멀티플레이 Seed + DataAsset 기반 절차적 맵 생성 구조 설계"
 description: "이번 작업에서는 멀티플레이 환경에서 동일한 Seed와 DataAsset을 기반으로 모든 클라이언트가 동기화된 절차적 맵을 생성할 수 있는 구조를 설계하였습니다."
 date: 2025-11-11T06:19:27.389Z
-tags: ["Project ARC","UE5"]
+tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/96420220-9e60-4817-8c0f-f5bd4a21c733-image.png
 ---

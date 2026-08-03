@@ -2,7 +2,7 @@
 title: "[Project Escape] 아이템 사용과 퀵 슬롯 시스템"
 description: "땅에 떨어진 아이템을 플레이어가 주웠을 때 실행되어야 하는 로직은 매우 다양하며, 해당 아이템이 사용될 때의 동작 또한 제각각입니다. "
 date: 2025-08-01T11:56:00.327Z
-tags: ["Project Escape","UE5"]
+tags: ["project escape","ue5"]
 image:
   path: /assets/images/old/9758d8db-da0a-4680-8a6e-7cabbc39982a-image.webp
 ---

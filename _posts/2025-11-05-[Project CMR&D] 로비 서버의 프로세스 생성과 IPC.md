@@ -2,7 +2,7 @@
 title: "[Project CM/R&D] 로비 서버의 프로세스 생성과 IPC"
 description: "Project CM은 여러 개의 세션을 생성해야 할 필요가 있습니다. 로비에 모여있던 플레이어들은 매치메이킹을 통해 생성된 새로운 세션(서버)에 접속해서 게임을 플레이하는 구조이기 때문입니다."
 date: 2025-11-05T10:13:11.422Z
-tags: ["Project CM","UE5","R&D"]
+tags: ["project cm","ue5","r&d"]
 categories: [Project CM + Project Arc]
 ---
 Project CM은 여러 개의 세션을 생성해야 할 필요가 있습니다. 로비에 모여있던 플레이어들은 매치메이킹을 통해 생성된 새로운 세션(게임 서버 인스턴스)에 접속해서 게임을 플레이하는 구조이기 때문입니다.

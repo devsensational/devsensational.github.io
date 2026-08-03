@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Server Lobby와 Client-Server 동기화 및 문제 해결"
 description: "플레이어가 서버에 접속하여 로비에서 다른 플레이어들과 함께 대기하고, Ready 상태를 관리할 수 있는 시스템을 구현했습니다."
 date: 2025-09-14T15:27:49.035Z
-tags: ["Project OnlyOne","UE5","트러블슈팅"]
+tags: ["project onlyone","ue5","트러블슈팅"]
 image:
   path: /assets/images/old/4c37f019-61b9-4667-bd3b-07c25fe050ac-image.webp
 categories: [Project OnlyOne]

@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Kill Feed"
 description: "킬/데스 이벤트가 발생할 때 화면 우측/상단 등에 일정 시간 표시 후 자동으로 사라지는 피드를 제공합니다."
 date: 2025-09-25T10:58:31.438Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/cf23d8ab-f264-41e9-8ab7-18ceac18497c-image.webp
 categories: [Project OnlyOne]

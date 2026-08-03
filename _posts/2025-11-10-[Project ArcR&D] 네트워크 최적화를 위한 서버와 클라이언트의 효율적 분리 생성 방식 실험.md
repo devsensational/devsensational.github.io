@@ -2,7 +2,7 @@
 title: "[Project Arc/R&D] 네트워크 최적화를 위한 서버와 클라이언트의 효율적 분리 생성 방식 실험"
 description: "이번 실험에서는 Seed를 활용하여 서버와 클라이언트가 각자의 환경에서 동일한 지형을 독립적으로 생성하는 구조가 가능한지 검증하고자 합니다."
 date: 2025-11-10T05:13:52.174Z
-tags: ["Project ARC","UE5","R&D"]
+tags: ["project arc","ue5","r&d"]
 image:
   path: /assets/images/old/78085532-df04-43b0-80b8-8c04d44bc06e-image.png
 categories: [Project CM + Project Arc]

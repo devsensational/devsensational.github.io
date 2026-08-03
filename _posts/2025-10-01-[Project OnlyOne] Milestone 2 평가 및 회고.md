@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Milestone 2 평가 및 회고"
 description: "이번 프로젝트를 진행하면서 팀 전체가 협업 속에서 어떤 점을 잘 유지했고, 어떤 부분에서 어려움을 겪었으며, 앞으로 개선해야 할 부분이 무엇인지 돌아보기 위해 KPT 회고를 진행했습니다."
 date: 2025-10-01T11:11:12.249Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/562ef1ef-648f-4b69-850d-dd606f088aa6-image.webp
 categories: [Project OnlyOne]

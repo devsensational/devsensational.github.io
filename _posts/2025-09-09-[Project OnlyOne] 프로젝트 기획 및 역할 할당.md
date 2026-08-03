@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] 프로젝트 기획 및 역할 할당"
 description: "프로젝트를 기획하고, 역할을 일임했습니다."
 date: 2025-09-09T11:52:36.462Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 categories: [Project OnlyOne]
 ---
 # 목표 및 콘셉트

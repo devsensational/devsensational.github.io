@@ -2,7 +2,7 @@
 title: "[Project Arc] 데이터 기반 Procedural Map Generator + 레벨 스트리밍 구현"
 description: "이번 글에서는 구현한 자동 맵 생성(MapGenerate) 로직과, 생성된 맵 구조에 맞춰 서브 레벨을 동적으로 로드하는 레벨 스트리밍 구조를 정리해 보겠습니다."
 date: 2025-11-19T09:59:10.876Z
-tags: ["Project ARC","UE5"]
+tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/3a5351f0-1a0a-4867-b5c2-57866de3efc0-image.png
 categories: [Project CM + Project Arc]

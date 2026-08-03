@@ -2,7 +2,7 @@
 title: "[Project Arc] 상점 UI 설계"
 description: "오늘은 언리얼 엔진 UMG를 사용해 상점(Shop) UI를 설계·구현한 과정을 정리해 보았습니다. 특히 아이템별 개별 위젯 구성, 구매/판매 가격 분리, 아이템 ID 관리, Vertical List 기반 아이템 나열에 초점을 두고 작업을 진행하였습니다."
 date: 2025-12-23T12:01:22.607Z
-tags: ["Project ARC","UE5"]
+tags: ["project arc","ue5"]
 categories: [Project CM + Project Arc]
 ---
 오늘은 언리얼 엔진 UMG를 사용해 상점(Shop) UI를 설계·구현한 과정을 정리해 보았습니다. 특히 **아이템별 개별 위젯 구성**, **구매/판매 가격 분리**, **아이템 ID 관리**, **Vertical List 기반 아이템 나열**에 초점을 두고 작업을 진행하였습니다. 본 문서는 추후 상점 기능을 확장하거나 다른 인벤토리/상점 UI를 설계할 때 참고 자료로 활용하기 위해 작성하였습니다.

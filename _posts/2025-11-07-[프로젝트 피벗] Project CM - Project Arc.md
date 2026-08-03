@@ -2,7 +2,7 @@
 title: "[프로젝트 피벗] Project CM -> Project Arc"
 description: "저희 프로젝트는 본래 기술 데모 수준의 프로젝트를 준비하면서 PvPvE 기반의 액션 게임을 개발하려고 했습니다. 하지만, 팀 내에서 Steam 출시를 하자는 의견이 나와 팀원 간 협의를 통해 PvE 게임으로 변경되었습니다."
 date: 2025-11-07T10:26:03.081Z
-tags: ["Project ARC","Project CM","UE5"]
+tags: ["project arc","project cm","ue5"]
 categories: [Project CM + Project Arc]
 ---
 저희 프로젝트는 본래 기술 데모 수준의 프로젝트를 준비하면서 PvPvE 기반의 액션 게임을 개발하려고 했습니다. 하지만, 팀 내에서 Steam 출시를 하자는 의견이 나와 팀원 간 협의를 통해 PvE 게임으로 변경되었습니다. 따라서, 서사 중심의 소울라이크에 로그라이트를 혼합한 게임이 개발될 예정입니다.

@@ -2,7 +2,7 @@
 title: "[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결"
 description: "오늘은 로비에서 PlayerState의 닉네임을 서버에서 클라이언트로 안정적으로 동기화하는 과정에서 발생한 문제를 분석하고 해결한 과정을 정리했습니다."
 date: 2025-10-31T05:56:42.534Z
-tags: ["Project CM","UE5","트러블슈팅"]
+tags: ["project cm","ue5","트러블슈팅"]
 image:
   path: /assets/images/old/c35883c4-fd0f-4213-a6ef-5f5cfab54cc9-image.png
 categories: [Project CM + Project Arc]

@@ -2,7 +2,7 @@
 title: "[Project Arc] 상점 기능 고도화 (컨텐츠 정보 반영, 개수 증감 버튼 등)"
 description: "오늘은 프로젝트에서 Shop UI를 구현하고, 특히 상점 리스트에서 아이템을 선택했을 때 상세 패널에 정보가 반영되는 흐름과 아이템 수량(Quantity) 증감 UI를 중심으로 작업을 진행하였습니다."
 date: 2025-12-30T11:31:07.733Z
-tags: ["Project ARC","UE5"]
+tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/7dd659b9-5083-43de-9fd3-bc26c0d3051d-image.webp
 categories: [Project CM + Project Arc]

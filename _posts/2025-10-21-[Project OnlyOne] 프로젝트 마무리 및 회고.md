@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] 프로젝트 마무리 및 회고"
 description: "약 1달 간의 작업 끝에 'Project OnlyOne'이 마무리 되었습니다. 이번 포스트에서는 프로젝트의 결과물을 보여드리고 회고를 하고자 합니다."
 date: 2025-10-21T09:30:16.535Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 categories: [Project OnlyOne]
 ---
 약 1달 간의 작업 끝에 'Project OnlyOne'이 마무리 되었습니다. 이번 포스트에서는 프로젝트의 결과물을 보여드리겠습니다. 또한, 저번 회고를 정리해보고자 합니다.

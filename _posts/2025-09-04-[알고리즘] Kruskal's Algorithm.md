@@ -2,7 +2,7 @@
 title: "[알고리즘] Kruskal's Algorithm"
 description: "크루스칼 알고리즘은 최소 신장 트리(Minimum Spanning Tree, MST)를 구하는 대표적인 그리디 알고리즘입니다."
 date: 2025-09-04T11:16:13.569Z
-tags: ["C++","알고리즘"]
+tags: ["c++","알고리즘"]
 image:
   path: /assets/images/old/29963d03-bad0-4c9e-869f-90d752a50a10-image.png
 categories: [C++]

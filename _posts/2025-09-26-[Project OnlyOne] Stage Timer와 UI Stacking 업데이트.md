@@ -2,7 +2,7 @@
 title: "[Project OnlyOne] Stage Timer와 UI Stacking 업데이트"
 description: "스테이지의 남은 시간을 출력하는 UI와 UI Stacking을 개선했습니다."
 date: 2025-09-26T10:19:26.350Z
-tags: ["Project OnlyOne","UE5"]
+tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/552f42f7-b1f3-474f-9a90-d7d98320b911-image.webp
 categories: [Project OnlyOne]

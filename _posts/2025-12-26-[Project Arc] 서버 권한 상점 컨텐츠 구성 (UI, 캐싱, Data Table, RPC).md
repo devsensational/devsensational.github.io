@@ -2,7 +2,7 @@
 title: "[Project Arc] 서버 권한 상점 컨텐츠 구성 (UI, 캐싱, Data Table, RPC)"
 description: "오늘은 프로젝트에 NPC 상점 시스템을 구현하고, NpcWorldSubsystem / NpcShopComponent / PlayerController / Shop UI 위젯 사이의 흐름을 점검하는 작업을 진행하였습니다."
 date: 2025-12-26T16:26:38.250Z
-tags: ["Project ARC","UE5"]
+tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/94459a85-c765-4c68-9c1f-407b6d43be98-image.webp
 categories: [Project CM + Project Arc]

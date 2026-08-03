@@ -2,7 +2,7 @@
 title: "[TPS프로젝트] (4) Object Pooling과 이벤트 매니저를 활용한 아이템 상호작용과 인벤토리 UI 구현"
 description: "개발은 결국 비용과의 싸움입니다. 여기서 비용은 조금 포괄적인 개념입니다. 돈이 될 수도 있고, 시간(일정)이 될 수도 있고, 연산에 필요한 데이터를 메모리에서 가져오는 행위도 될 수 있습니다. "
 date: 2024-06-10T07:55:59.915Z
-tags: ["C#","Unity"]
+tags: ["c#","unity"]
 image:
   path: /assets/images/old/0d07310e-f0a4-4684-9ec2-df06d5c8e58e-image.webp
 categories: [TPSProject]

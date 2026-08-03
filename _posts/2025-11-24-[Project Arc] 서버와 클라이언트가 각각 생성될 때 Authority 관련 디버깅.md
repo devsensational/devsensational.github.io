@@ -2,7 +2,7 @@
 title: "[Project Arc] 서버와 클라이언트가 각각 생성될 때 Authority 관련 디버깅 "
 description: "리슨 서버/클라이언트 환경에서 Replicate 해야하는 인스턴스가 클라이언트에서도 생성되는 문제가 발생했습니다."
 date: 2025-11-24T14:45:54.657Z
-tags: ["Project ARC","UE5","트러블슈팅"]
+tags: ["project arc","ue5","트러블슈팅"]
 image:
   path: /assets/images/old/7c9c5f59-b43e-41f4-b0e9-3b61be985170-image.png
 categories: [Project CM + Project Arc]

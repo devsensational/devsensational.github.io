@@ -2,7 +2,7 @@
 title: "[UE5] Gameplay Ability System"
 description: "Gameplay Ability System은 언리얼에서 제공하는 범용적인 스킬 시스템 프레임워크입니다. "
 date: 2025-09-03T11:18:02.407Z
-tags: ["GAS","UE5"]
+tags: ["gas","ue5"]
 ---
 이번 포스트에서는 프로젝트에 Gameplay Ability System(이하 GAS)를 적용하기 전에 한 번 정리를 하려고 합니다. 
 

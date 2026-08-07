@@ -1,5 +1,5 @@
 ---
-title: 2026-08-06-Union-Find
+title: Union-Find
 date: 2026-08-06 17:16 +0900
 category: [C++]
 tags: ["C++", "알고리즘"]

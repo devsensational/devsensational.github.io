@@ -5,7 +5,7 @@ date: 2025-09-25T10:58:31.438Z
 tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/cf23d8ab-f264-41e9-8ab7-18ceac18497c-image.webp
-categories: [Project OnlyOne]
+categories: [Project, Project OnlyOne]
 ---
 ![](/assets/images/old/cf23d8ab-f264-41e9-8ab7-18ceac18497c-image.webp)
 

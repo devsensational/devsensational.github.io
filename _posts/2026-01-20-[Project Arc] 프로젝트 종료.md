@@ -3,7 +3,7 @@ title: "[Project Arc] 프로젝트 종료"
 description: "2025년 10월 28일 부터 시작되어 1월 12일을 끝으로, 2개월 이상 진행한 Project Arc가 종료되었습니다. "
 date: 2026-01-20T05:56:49.887Z
 tags: ["project arc","ue5"]
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 2025년 10월 28일 부터 시작되어 1월 12일을 끝으로, 2개월 이상 진행한 Project Arc가 종료되었습니다. 
 

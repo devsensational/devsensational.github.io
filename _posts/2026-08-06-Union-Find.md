@@ -2,7 +2,7 @@
 title: Union-Find
 date: 2026-08-06 17:16 +0900
 category: [Algorithm]
-tags: ["c++", "알고리즘"]
+tags: ["cpp", "algorithm"]
 description: 두 그룹이 같은 그룹에 속해 있거나 합쳐야 할 때 유용한 알고리즘
 math: true
 ---

@@ -2,8 +2,8 @@
 title: "[C++] C++ sort와 priority_queue의 결과가 반대로 나오는 이유"
 description: "C++에서 sort()와 priority_queue는 동일한 비교 함수를 사용할 때, 결과가 반대로 나오는 것처럼 보이는 이유가 무엇인지 분석했습니다."
 date: 2026-07-17T07:23:22.585Z
-tags: ["c++"]
-categories: [C++]
+tags: ["cpp"]
+categories: [CPP]
 ---
 
 ### 원문 출처

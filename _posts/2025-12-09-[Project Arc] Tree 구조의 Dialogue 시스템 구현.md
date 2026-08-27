@@ -5,7 +5,7 @@ date: 2025-12-09T11:35:04.796Z
 tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/9c16ca4f-1359-425b-aafd-43c3d0d40c59-image.png
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 이번 기능에서는 NPC가 단순히 한 줄 대사만 출력하는 수준을 넘어서, **트리 형태로 분기되는 대화 시스템**을 직접 설계하고 구현해 보았습니다. 언리얼 엔진의 `UObject` / `UActorComponent` / `AActor` 구조를 활용해, 블루프린트에서도 직관적으로 편집 가능한 형태를 목표로 했습니다. 특히, "대화를 따라가다 특정 노드에서 액션(상점 열기 등)을 실행"하는 흐름까지 테스트 코드로 구축해 본 것이 핵심입니다.
 

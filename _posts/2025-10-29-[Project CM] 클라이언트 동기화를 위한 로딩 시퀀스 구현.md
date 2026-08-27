@@ -5,7 +5,7 @@ date: 2025-10-29T10:55:16.233Z
 tags: ["project cm","ue5"]
 image:
   path: /assets/images/old/bd70a123-80c5-44c4-b779-6563b9b1f387-image.png
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 오늘은 `ACMGameStateBase`의 클라이언트 로딩 시퀀스 구조를 구현했습니다. 이 클래스는 게임 시작 시점에서 **클라이언트 초기화 과정을 n단계로 분리해 관리**하며, 모든 동기화 대상 컴포넌트가 준비된 뒤 순차적으로 로딩 이벤트를 브로드캐스트하는 로직을 가지고 있습니다.
 
@@ -41,13 +41,13 @@ categories: [Project CM + Project Arc]
 
 ## 제어 메서드  
 
-| 메서드 | 설명 |
-|--------|------|
+| 메서드                         | 설명                                                                    |
+| ------------------------------ | ----------------------------------------------------------------------- |
 | `NotifyComponentSynced(FName)` | 해당 컴포넌트 완료 처리 → 전체 완료 시 `StartClientLoadSequence()` 호출 |
-| `StartClientLoadSequence()` | 다음 틱에 `HandleLoadBegin()` 예약 |
-| `HandleLoadBegin()` | `OnLoadBegin.Broadcast()` → 다음 틱에 `HandleLoadUI()` |
-| `HandleLoadUI()` | `OnLoadUI.Broadcast()` → 다음 틱에 `HandleLoadCompleted()` |
-| `HandleLoadCompleted()` | `OnLoadCompleted.Broadcast()` |
+| `StartClientLoadSequence()`    | 다음 틱에 `HandleLoadBegin()` 예약                                      |
+| `HandleLoadBegin()`            | `OnLoadBegin.Broadcast()` → 다음 틱에 `HandleLoadUI()`                  |
+| `HandleLoadUI()`               | `OnLoadUI.Broadcast()` → 다음 틱에 `HandleLoadCompleted()`              |
+| `HandleLoadCompleted()`        | `OnLoadCompleted.Broadcast()`                                           |
 
 ---
 

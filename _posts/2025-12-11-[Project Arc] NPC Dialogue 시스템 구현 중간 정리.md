@@ -5,7 +5,7 @@ date: 2025-12-11T14:39:36.497Z
 tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/df5ac9b8-cd73-4ff7-82ae-dd07fcc4568b-image.png
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 ## 목표
   - NPC와 상호작용 시 대화 UI 위젯을 스택 기반으로 표시/제거

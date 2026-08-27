@@ -2,10 +2,10 @@
 title: "[Project Arc] TMap 키로 사용자 정의 구조체(FCMRoomPosition) 사용 시 필요한 요소와 해결 과정"
 description: " 컴파일 단계에서 TMap 키 타입에 대한 해시 함수와 동등 비교 연산자가 없다는 오류가 발생했고, 이로 인해 빌드가 진행되지 않았습니다. 본 문서에서는 오류가 발생한 원인과 이를 해결하기 위해 적용한 코드 변경 사항을 정리했습니다."
 date: 2025-11-12T03:42:47.783Z
-tags: ["project arc","ue5","트러블슈팅"]
+tags: ["project arc","ue5","troubleshooting"]
 image:
   path: /assets/images/old/b3716209-0ace-4ab4-bfc6-171a11810fe9-image.png
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 절차적 맵 생성 기능을 구현하면서, 격자 좌표를 기반으로 중복 지형 생성을 방지하고 좌표로 즉시 방(Room) 포인터에 접근하기 위해 TMap의 키로 FCMRoomPosition 구조체를 사용하고자 했습니다. 그러나 컴파일 단계에서 TMap 키 타입에 대한 해시 함수와 동등 비교 연산자가 없다는 오류가 발생했고, 이로 인해 빌드가 진행되지 않았습니다. 본 문서에서는 오류가 발생한 원인과 이를 해결하기 위해 적용한 코드 변경 사항을 정리했습니다.
 

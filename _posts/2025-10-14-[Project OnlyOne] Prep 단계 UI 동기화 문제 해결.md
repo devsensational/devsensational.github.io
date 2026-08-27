@@ -2,10 +2,10 @@
 title: "[Project OnlyOne] Prep 단계 UI 동기화 문제 해결"
 description: "준비 시간 때, Host에서는 UI가 정상적으로 출력되는데, Client에서는 UI가 출력되지 않는 문제가 발생했습니다."
 date: 2025-10-14T11:54:37.488Z
-tags: ["project onlyone","ue5","트러블슈팅"]
+tags: ["project onlyone","ue5","troubleshooting"]
 image:
   path: /assets/images/old/91597b7d-fce9-4091-a884-463f6e8d9eaa-image.png
-categories: [Project OnlyOne]
+categories: [Project, Project OnlyOne]
 ---
 ![](/assets/images/old/91597b7d-fce9-4091-a884-463f6e8d9eaa-image.png)
 ![](/assets/images/old/77b7803a-d052-4893-a1d0-fc2d9c0ced48-image.png)

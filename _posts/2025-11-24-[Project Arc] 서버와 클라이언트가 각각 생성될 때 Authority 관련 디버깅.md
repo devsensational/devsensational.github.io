@@ -2,10 +2,10 @@
 title: "[Project Arc] 서버와 클라이언트가 각각 생성될 때 Authority 관련 디버깅 "
 description: "리슨 서버/클라이언트 환경에서 Replicate 해야하는 인스턴스가 클라이언트에서도 생성되는 문제가 발생했습니다."
 date: 2025-11-24T14:45:54.657Z
-tags: ["project arc","ue5","트러블슈팅"]
+tags: ["project arc","ue5","troubleshooting"]
 image:
   path: /assets/images/old/7c9c5f59-b43e-41f4-b0e9-3b61be985170-image.png
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 리슨 서버/클라이언트 환경에서 **Replicate 해야하는 인스턴스가 클라이언트에서도 생성**되는 문제가 발생했습니다. 특히 `bReplicates` 를 켜지 않았는데도 클라이언트에서 액터가 보이고, `HasAuthority()` 로 분기를 나눴다고 생각했는데도 여전히 중복 생성이 일어나는 상황이라, 네트워크 권한(Authority)와 NetMode 개념을 다시 정리할 필요가 있었습니다.
 

@@ -5,7 +5,7 @@ date: 2025-12-26T16:26:38.250Z
 tags: ["project arc","ue5"]
 image:
   path: /assets/images/old/94459a85-c765-4c68-9c1f-407b6d43be98-image.webp
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 ![](/assets/images/old/94459a85-c765-4c68-9c1f-407b6d43be98-image.webp)
 

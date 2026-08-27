@@ -2,10 +2,10 @@
 title: "[C++] iterator, reverse_iterator의 차이점"
 description: "iterator, reverse_iterator의 차이점에 대해 알아봤습니다"
 date: 2026-07-26T09:29:10.269Z
-tags: ["c++"]
+tags: ["cpp"]
 image:
   path: /assets/images/old/0b2670e3-e473-479f-88a7-d1b4729f633f-image.png
-categories: [C++]
+categories: [CPP]
 ---
 ### 라이선스 표기
 
@@ -30,12 +30,12 @@ STL vector에서 `rbegin()`으로 리턴받은 iterator를 인자로 사용하�
 `begin()`은 ` vector<T>::iterator`을 반환하고 `rbegin()`은 `vector<T>::reverse_iterator`를 반환하고 있었습니다. 또한, 연산 방향이나 종료 지점에도 차이가 존재했습니다.
 
 
-| **구분** | **begin()** | **rbegin()** |
-| --- | --- | --- |
-| **의미** | Begin (시작) | **Reverse** Begin (역방향 시작) |
-| **시작 위치** | 첫 번째 요소 (`[0]`) | 마지막 요소 (`[N-1]`) |
-| **종료 지점** | `end()` (마지막 다음 칸) | `rend()` (첫 번째 이전 칸) |
-| **`++` 연산 시** | 오른쪽으로 이동 | 왼쪽으로 이동 |
+| **구분**         | **begin()**              | **rbegin()**                    |
+| ---------------- | ------------------------ | ------------------------------- |
+| **의미**         | Begin (시작)             | **Reverse** Begin (역방향 시작) |
+| **시작 위치**    | 첫 번째 요소 (`[0]`)     | 마지막 요소 (`[N-1]`)           |
+| **종료 지점**    | `end()` (마지막 다음 칸) | `rend()` (첫 번째 이전 칸)      |
+| **`++` 연산 시** | 오른쪽으로 이동          | 왼쪽으로 이동                   |
 
 
 ---

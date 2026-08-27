@@ -3,6 +3,7 @@ title: "[Project Escape 종료] 개선점과 회고"
 description: "지난 7월 28일부터 8월 20일까지, 약 한 달간 진행했던 Project Escape가 막을 내렸습니다. 짧지 않은 시간 동안 많은 시도와 고민을 거쳤고, 그 과정에서 여러 배움과 한계도 함께 마주했습니다. "
 date: 2025-08-23T05:34:20.721Z
 tags: ["project escape","ue5"]
+categories: [Project, Project Escape]
 ---
 !youtube[Q2ABSiVUung]
 

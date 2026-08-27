@@ -2,10 +2,10 @@
 title: "[Project OnlyOne] Milestone 1 빌드 및 문제 해결"
 description: "M1을 마무리하는 날이 되었습니다. 저희 팀은 M1 기간 동안 게임의 한 사이클이 돌아가는 것을 목표로 잡았습니다. 하지만, 중간에 여러 일정이 새롭게 생기면서 목표를 메인 레벨안에 플레이어가 정상 접속하는 것을 목표로 하향조정했습니다."
 date: 2025-09-18T11:39:51.314Z
-tags: ["project onlyone","ue5","트러블슈팅"]
+tags: ["project onlyone","ue5","troubleshooting"]
 image:
   path: /assets/images/old/8325d80a-3db4-4599-98d7-0b3afaaf2909-image.png
-categories: [Project OnlyOne]
+categories: [Project, Project OnlyOne]
 ---
 ![](/assets/images/old/8325d80a-3db4-4599-98d7-0b3afaaf2909-image.png)
 M1을 마무리하는 날이 되었습니다. 저희 팀은 M1 기간 동안 게임의 한 사이클이 돌아가는 것을 목표로 잡았습니다. 하지만, 중간에 여러 일정이 새롭게 생기면서 목표를 메인 레벨안에 플레이어가 정상 접속하는 것을 목표로 하향조정했습니다.

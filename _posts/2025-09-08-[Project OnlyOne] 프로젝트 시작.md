@@ -5,7 +5,7 @@ date: 2025-09-08T11:30:47.442Z
 tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/2216c896-cabf-47ff-9d1a-5d3aaed2cf6d-image.png
-categories: [Project OnlyOne]
+categories: [Project, Project OnlyOne]
 ---
 # 프로젝트 요약
 - **프로젝트 명:** Only One

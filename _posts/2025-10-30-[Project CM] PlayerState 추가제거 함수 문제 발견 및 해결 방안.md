@@ -2,9 +2,10 @@
 title: "[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안 "
 description: "로비에 접속 중인 플레이어 목록을 GameState에서 관리하기 위해 AddPlayerState와 RemovePlayerState를 오버라이드했지만, 실제로 호출되지 않았던 문제를 분석하고 해결했습니다."
 date: 2025-10-30T09:04:51.778Z
-tags: ["project cm","ue5","트러블슈팅"]
+tags: ["project cm","ue5","troubleshooting"]
 image:
   path: /assets/images/old/7e09ef98-acf9-4b3b-a753-49c38cb7c318-image.png
+categories: [Project, Project CM + Project Arc]
 ---
 오늘은 로비에 접속 중인 플레이어 목록을 GameState에서 관리하기 위해 AddPlayerState와 RemovePlayerState를 오버라이드했지만, 실제로 호출되지 않았던 문제를 분석하고,
 이를 GameMode의 PostLogin / Logout으로 대체하여 안정적으로 처리한 과정을 정리했습니다.
@@ -32,10 +33,10 @@ image:
 
 이때 `AddPlayerState` / `RemovePlayerState`는 엔진이 아래의 시점에서 자동 호출합니다:
 
-| 호출 함수                                          | 호출 타이밍                                                                     | 호출 주체                              |
-| ---------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------- |
+| 호출 함수                                      | 호출 타이밍                                                                                               | 호출 주체                              |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | `AddPlayerState(APlayerState* PlayerState)`    | **서버에서 새로운 플레이어가 GameMode에 의해 성공적으로 로그인되어, GameState의 PlayerArray에 추가될 때** | `AGameModeBase::PostLogin()` 내부 흐름 |
-| `RemovePlayerState(APlayerState* PlayerState)` | **플레이어가 세션에서 떠나거나(PlayerController가 Logout되거나 Destroy될 때)**                | `AGameModeBase::Logout()` 내부 흐름    |
+| `RemovePlayerState(APlayerState* PlayerState)` | **플레이어가 세션에서 떠나거나(PlayerController가 Logout되거나 Destroy될 때)**                            | `AGameModeBase::Logout()` 내부 흐름    |
 
 즉, **이 두 함수는 엔진이 자동으로 GameState의 PlayerArray를 갱신할 때** 불립니다.
 개발자가 수동으로 호출할 일이 거의 없고, 호출되려면 반드시 아래 조건들이 모두 맞아야 합니다.
@@ -69,11 +70,11 @@ image:
 #### 3. 왜 새 플레이어가 접속해도 AddPlayerState가 호출되지 않았는가
 
 
-| 원인                     | 설명                                                        |
-| ---------------------- | --------------------------------------------------------- |
+| 원인                      | 설명                                                                    |
+| ------------------------- | ----------------------------------------------------------------------- |
 | **GameStateClass 불일치** | 로비 맵의 GameMode가 ACMGameStateLobby가 아닌 다른 GameState를 사용 중. |
-| **서버 전용 함수**           | Add/Remove는 서버 Authority에서만 호출됨. 클라 로그에서는 안 찍힘.           |
-| **특수 로그인 흐름**          | Spectator나 Pending 상태의 컨트롤러는 AddPlayerState 호출 안 됨.       |
+| **서버 전용 함수**        | Add/Remove는 서버 Authority에서만 호출됨. 클라 로그에서는 안 찍힘.      |
+| **특수 로그인 흐름**      | Spectator나 Pending 상태의 컨트롤러는 AddPlayerState 호출 안 됨.        |
 
 ---
 

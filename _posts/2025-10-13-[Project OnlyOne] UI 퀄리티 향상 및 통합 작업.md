@@ -5,7 +5,7 @@ date: 2025-10-13T12:24:18.059Z
 tags: ["project onlyone","ue5"]
 image:
   path: /assets/images/old/90498b9b-d069-416b-9644-123f7013d77d-image.png
-categories: [Project OnlyOne]
+categories: [Project, Project OnlyOne]
 ---
 프로젝트의 퀄리티를 높이기 위해 프로토타입이었던 UI의 퀄리티를 향상시키고, 일부 통합 작업을 진행했습니다. 
 

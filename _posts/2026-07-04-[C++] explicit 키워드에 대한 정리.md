@@ -2,10 +2,10 @@
 title: "[C++] explicit 키워드에 대한 정리"
 description: "explicit 키워드에 대해 정리했습니다"
 date: 2026-07-04T09:52:50.952Z
-tags: ["c++"]
+tags: ["cpp"]
 image:
   path: /assets/images/old/5cb169e4-12c1-44ea-9f88-0f0858be913d-image.png
-categories: [C++]
+categories: [CPP]
 ---
 원문 출처
 https://quuxplusone.github.io/blog/2023/04/08/most-ctors-should-be-explicit/

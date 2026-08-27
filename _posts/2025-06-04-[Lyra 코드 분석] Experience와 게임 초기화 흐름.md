@@ -2,7 +2,8 @@
 title: "[Lyra 코드 분석] Experience와 게임 초기화 흐름"
 description: "Lyra 프로젝트는 Epic Games에서 공식적으로 제공하는 멀티플레이어 슈팅 게임 템플릿으로, 최신 언리얼 엔진 5의 구조와 기능을 실제 게임에 어떻게 적용하는지 잘 보여줍니다."
 date: 2025-06-04T11:31:33.719Z
-tags: ["ue5","코드분석"]
+tags: ["ue5","rnd"]
+categories: [UE5]
 image:
   path: /assets/images/old/cba3ea5a-5013-4b18-bc20-b928b010ebf5-image.png
 ---
@@ -33,19 +34,19 @@ Experience 적용 대상이 되는 핵심 액터들
 
 
 ## 게임 시작 로직의 흐름
-|  단계 | 함수명                                         | 역할 요약                                      |
-| :-: | :------------------------------------------ | :----------------------------------------- |
-|  1  | 생성자                                         | GameMode 기본 세팅, Pawn/Controller/HUD 클래스 지정 |
-|  2  | InitGame                                    | 맵/옵션 파싱, Experience 할당 예약                  |
-|  3  | HandleMatchAssignmentIfNotExpectingOne      | ExperienceId 결정, OnMatchAssignmentGiven 호출 |
-|  4  | OnMatchAssignmentGiven                      | ExperienceManager에 ExperienceId 전달, 로딩 시작  |
-|  5  | InitGameState                               | GameState 초기화, Experience 로딩 완료 이벤트 등록     |
-|  6  | OnExperienceLoaded                          | Pawn/HUD/무기/룰 등 Experience 기반 초기 세팅        |
-|  7  | HandleStartingNewPlayer\_Implementation     | Experience가 준비되었을 때만 플레이어 스폰               |
-|  8  | ChoosePlayerStart\_Implementation           | 스폰 위치 결정 (PlayerSpawningManager 활용)        |
-|  9  | SpawnDefaultPawnAtTransform\_Implementation | Experience의 PawnData를 기반으로 Pawn 스폰         |
-|  10 | FinishRestartPlayer                         | Pawn 리스폰/초기화 마무리 작업                        |
-|  11 | 그 외                                         | 리스폰, 팀 변경, 매치 교체 등도 Experience 기반          |
+| 단계  | 함수명                                      | 역할 요약                                           |
+| :---: | :------------------------------------------ | :-------------------------------------------------- |
+|   1   | 생성자                                      | GameMode 기본 세팅, Pawn/Controller/HUD 클래스 지정 |
+|   2   | InitGame                                    | 맵/옵션 파싱, Experience 할당 예약                  |
+|   3   | HandleMatchAssignmentIfNotExpectingOne      | ExperienceId 결정, OnMatchAssignmentGiven 호출      |
+|   4   | OnMatchAssignmentGiven                      | ExperienceManager에 ExperienceId 전달, 로딩 시작    |
+|   5   | InitGameState                               | GameState 초기화, Experience 로딩 완료 이벤트 등록  |
+|   6   | OnExperienceLoaded                          | Pawn/HUD/무기/룰 등 Experience 기반 초기 세팅       |
+|   7   | HandleStartingNewPlayer\_Implementation     | Experience가 준비되었을 때만 플레이어 스폰          |
+|   8   | ChoosePlayerStart\_Implementation           | 스폰 위치 결정 (PlayerSpawningManager 활용)         |
+|   9   | SpawnDefaultPawnAtTransform\_Implementation | Experience의 PawnData를 기반으로 Pawn 스폰          |
+|  10   | FinishRestartPlayer                         | Pawn 리스폰/초기화 마무리 작업                      |
+|  11   | 그 외                                       | 리스폰, 팀 변경, 매치 교체 등도 Experience 기반     |
 
 1. **GameMode 인스턴스 생성**
 언리얼 엔진에서는 맵(World)이 로딩될 때, **UEngine -> UGameInstance -> UWorld** 순으로 월드와 맵을 생성합니다. 이 과정에서 서버는 GameMode를 생성합니다(UWorld::InitializeActorsForPlay()에서 결정 후 생성).

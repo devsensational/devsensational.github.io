@@ -5,7 +5,7 @@ date: 2025-11-02T07:34:08.917Z
 tags: ["project cm","ue5"]
 image:
   path: /assets/images/old/db753cec-5904-44cf-826d-f934c4447c6a-image.png
-categories: [Project CM + Project Arc]
+categories: [Project, Project CM + Project Arc]
 ---
 오늘은 **로비 초대(Party Invite) 시스템**을 직접 구현했습니다.
 로비 내에서 플레이어가 다른 플레이어를 초대하고, 상대방이 초대 팝업을 통해 수락 또는 거절할 수 있도록 하는 기능입니다.

@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "Project Arc (Unreal, 절차적 맵 생성, 네트워크 최적화 등)"
-permalink: /portfolio/portfolio_1/
+permalink: /portfolio/portfolio_project_arc/
 ---
 
 ## 프로젝트 개요
 ---
 
-![image.png](/assets/images/portfolio1/image.png)
+![image.png](/assets/images/portfolio_project_arc_images/image.png)
 
 - **프로젝트 명:** Project Arc
 - **역할**
@@ -22,14 +22,14 @@ permalink: /portfolio/portfolio_1/
 - **기간:** 2025.10.28 ~ 2026.01.12
 - **인원:** 8명
 
-[시리즈 | Project CM + Project Arc - 개발자 김선호](https://velog.io/@dev_sensational/series/Project-CM)
+[시리즈 | Project CM + Project Arc - 개발자 김선호](https://devsensational.github.io/categories/project-cm-project-arc/)
 
 ## 핵심 기능
 ---
 
 ### 1. 시드 기반 **Procedural Map** 생성
 
-![실제 생성된 지형](/assets/images/portfolio1/image%201.png)
+![실제 생성된 지형](/assets/images/portfolio_project_arc_images/image%201.png)
 
 > **시드 기반 Procedural Map + 데이터 기반 맵 생성 구조를 통해, 확장성과 성능을 동시에 확보한 맵 생성 시스템을 설계·구현했습니다.**
 
@@ -93,7 +93,7 @@ permalink: /portfolio/portfolio_1/
     
 - Data-driven 설계 (기획 친화적 구조)
     
-    ![image.png](/assets/images/portfolio1/image%202.png)
+    ![image.png](/assets/images/portfolio_project_arc_images/image%202.png)
     
 - Actor 기반 월드 구성 자동화
 - 재현 가능한 Procedural 시스템 구축
@@ -114,9 +114,9 @@ permalink: /portfolio/portfolio_1/
 
 > **Tree 기반 Dialogue 구조와 Action 시스템을 결합하여, 분기형 대화와 게임 로직 실행을 동시에 처리하는 데이터 기반 NPC 상호작용 시스템을 설계·구현했습니다.**
 
-![56.gif](/assets/images/portfolio1/56.gif)
+![56.gif](/assets/images/portfolio_project_arc_images/56.gif)
 
-![58.gif](/assets/images/portfolio1/58.gif)
+![58.gif](/assets/images/portfolio_project_arc_images/58.gif)
 
 #### 기술적 포인트
 
@@ -139,7 +139,7 @@ permalink: /portfolio/portfolio_1/
     
 - **Data-driven Dialogue 시스템**
     
-    ![image.png](/assets/images/portfolio1/image%203.png)
+    ![image.png](/assets/images/portfolio_project_arc_images/image%203.png)
     
     - DataTable / 구조체 기반 대화 정의
     - 코드 수정 없이 콘텐츠 확장 가능
@@ -182,7 +182,7 @@ permalink: /portfolio/portfolio_1/
 
 ### 3. 서버 권한 기반 Shop 시스템 & 데이터 기반 상점 고도화
 
-![35.gif](/assets/images/portfolio1/35.gif)
+![35.gif](/assets/images/portfolio_project_arc_images/35.gif)
 
 > **서버 권한 기반 구조와 데이터 중심 설계를 결합하여, 보안성과 확장성을 동시에 확보한 상점 시스템을 구현했습니다.**
 
@@ -210,7 +210,7 @@ permalink: /portfolio/portfolio_1/
     
 - **DataTable 기반 상점 데이터 구조**
     
-    ![image.png](/assets/images/portfolio1/image%204.png)
+    ![image.png](/assets/images/portfolio_project_arc_images/image%204.png)
     
     - 아이템 정보를 DataTable로 분리
     - 가격 / 설명 / 타입 등 데이터 관리
@@ -323,7 +323,7 @@ permalink: /portfolio/portfolio_1/
 
 #### 결과
 
-![image.png](/assets/images/portfolio1/image%205.png)
+![image.png](/assets/images/portfolio_project_arc_images/image%205.png)
 
 | 항목                 | 개선 결과                           |
 | -------------------- | ----------------------------------- |
@@ -340,7 +340,7 @@ permalink: /portfolio/portfolio_1/
 
 ### 2. GameStarter NPC 구현 및 Remote Client 필터링 문제 해결
 
-![57.gif](/assets/images/portfolio1/57.gif)
+![57.gif](/assets/images/portfolio_project_arc_images/57.gif)
 
 #### 문제 상황
 
@@ -406,7 +406,7 @@ permalink: /portfolio/portfolio_1/
 
 **변경된 상호작용 Sequence Diagram 보기**
 
-![image.png](/assets/images/portfolio1/image%206.png)
+![image.png](/assets/images/portfolio_project_arc_images/image%206.png)
 
 #### 결과
 
@@ -420,3 +420,11 @@ permalink: /portfolio/portfolio_1/
 #### 해결 과정
 
 [[Project Arc] GameStarter NPC 구현 및 Remote Client 필터링 문제 해결]({% post_url 2026-01-06-[Project Arc] GameStarter NPC 구현 및 Remote Client 필터링 문제 해결 %})
+
+<br><br>
+
+<div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+  <a href="/portfolio/" style="display: inline-block; padding: 14px 28px; font-size: 1.05rem; font-weight: 600; color: #495057; background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: all 0.2s ease-in-out;">
+    <i class="fas fa-arrow-left" style="margin-right: 8px; color: #6c757d;"></i> 포트폴리오 메인으로 돌아가기
+  </a>
+</div>

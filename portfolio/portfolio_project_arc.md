@@ -22,8 +22,6 @@ permalink: /portfolio/portfolio_project_arc/
 - **기간:** 2025.10.28 ~ 2026.01.12
 - **인원:** 8명
 
-[시리즈 | Project CM + Project Arc - 개발자 김선호](/categories/project-cm-project-arc/)
-
 ## 핵심 기능
 ---
 

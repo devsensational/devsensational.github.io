@@ -22,7 +22,7 @@ permalink: /portfolio/portfolio_project_arc/
 - **기간:** 2025.10.28 ~ 2026.01.12
 - **인원:** 8명
 
-[시리즈 | Project CM + Project Arc - 개발자 김선호](https://devsensational.github.io/categories/project-cm-project-arc/)
+[시리즈 | Project CM + Project Arc - 개발자 김선호](/categories/project-cm-project-arc/)
 
 ## 핵심 기능
 ---
@@ -425,6 +425,6 @@ permalink: /portfolio/portfolio_project_arc/
 
 <div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
   <a href="/portfolio/" style="display: inline-block; padding: 14px 28px; font-size: 1.05rem; font-weight: 600; color: #495057; background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: all 0.2s ease-in-out;">
-    <i class="fas fa-arrow-left" style="margin-right: 8px; color: #6c757d;"></i> 포트폴리오 메인으로 돌아가기
+    <i class="fas fa-arrow-left" style="margin-right: 8px; color: #6c757d;"></i> 포트폴리오 리스트로 돌아가기
   </a>
 </div>

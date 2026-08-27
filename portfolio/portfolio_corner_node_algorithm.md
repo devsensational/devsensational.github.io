@@ -56,9 +56,8 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
 
 ### 1. 도면 기반 Topology Map 생성 알고리즘 (CNA)
 
-![Topology Map 생성 결과물]
-(/assets/images/portfolio_corner_node_algorithm_images/7.png)
-*Topology Map 생성 결과물*
+![Topology Map 생성 결과물](/assets/images/portfolio_corner_node_algorithm_images/7.png)
+_Topology Map 생성 결과물_
 
 **그래프 정점 개수 감소율**
 
@@ -162,7 +161,7 @@ public class CornerNodeAlgorithmV2
 
 ### 2. A* Algorithm 기반 경로 탐색
 
-![생성된 Topology Map에 A*를 적용한 결과물](/assets/images/portfolio_corner_node_algorithm_images/13.png)
+![생성된 Topology Map에 A\*를 적용한 결과물](/assets/images/portfolio_corner_node_algorithm_images/13.png)
 _생성된 Topology Map에 A\*를 적용한 결과물_
 
 **A\* 단일 적용 vs A\* + 최적화 적용 결과 표**
@@ -286,7 +285,7 @@ private AStarNode addCloseList()
 
 ### 3. MR 내비게이션 시스템 구현 (Unity + MRTK)
 
-![목적지 지정](/assets/images/portfolio_corner_node_algorithm_images/4bda421b-d80c-4fb8-9d40-796b25f37fc8.png)
+![목적지 지정](/assets/images/portfolio_corner_node_algorithm_images/30.png)
 _목적지 지정_
 
 ![경로 안내](/assets/images/portfolio_corner_node_algorithm_images/28.png)

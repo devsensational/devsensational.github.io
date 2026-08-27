@@ -319,3 +319,11 @@ _경로 안내_
 - 팀 리딩 역할 수행
 - 문서화 및 커뮤니케이션 체계적 운영
 - 실시간 협업 환경 구축으로 프로젝트 효율 향상
+
+<br><br>
+
+<div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+  <a href="/portfolio/" style="display: inline-block; padding: 14px 28px; font-size: 1.05rem; font-weight: 600; color: #495057; background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: all 0.2s ease-in-out;">
+    <i class="fas fa-arrow-left" style="margin-right: 8px; color: #6c757d;"></i> 포트폴리오 리스트로 돌아가기
+  </a>
+</div>

@@ -56,7 +56,8 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
 
 ### 1. 도면 기반 Topology Map 생성 알고리즘 (CNA)
 
-![Topology Map 생성 결과물](/assets/images/portfolio_corner_node_algorithm_images/7.png)
+![Topology Map 생성 결과물]
+(/assets/images/portfolio_corner_node_algorithm_images/7.png)
 *Topology Map 생성 결과물*
 
 **그래프 정점 개수 감소율**
@@ -162,9 +163,9 @@ public class CornerNodeAlgorithmV2
 ### 2. A* Algorithm 기반 경로 탐색
 
 ![생성된 Topology Map에 A*를 적용한 결과물](/assets/images/portfolio_corner_node_algorithm_images/13.png)
-*생성된 Topology Map에 A*를 적용한 결과물*
+_생성된 Topology Map에 A\*를 적용한 결과물_
 
-**A* 단일 적용 vs A* + 최적화 적용 결과 표**
+**A\* 단일 적용 vs A\* + 최적화 적용 결과 표**
 
 | **Complexity**       | **Preprocessing Time** | **A***    | **A* with CNA** | **Percentage** |
 | -------------------- | ---------------------- | --------- | --------------- | -------------- |
@@ -174,6 +175,7 @@ public class CornerNodeAlgorithmV2
 | **Complicated**      | 280.8 ms               | 775.5 ms  | 6.7 ms          | -99.14%        |
 | **Very Complicated** | 1137.2 ms              | 3342.1 ms | 9.7 ms          | -99.71%        |
 | **Special Case**     | 582.8 ms               | 557.6 ms  | 5.5 ms          | -99.01%        |
+
 
 | 항목          | 내용                                                  |
 | ------------- | ----------------------------------------------------- |
@@ -285,10 +287,10 @@ private AStarNode addCloseList()
 ### 3. MR 내비게이션 시스템 구현 (Unity + MRTK)
 
 ![목적지 지정](/assets/images/portfolio_corner_node_algorithm_images/4bda421b-d80c-4fb8-9d40-796b25f37fc8.png)
-*목적지 지정*
+_목적지 지정_
 
 ![경로 안내](/assets/images/portfolio_corner_node_algorithm_images/28.png)
-*경로 안내*
+_경로 안내_
 
 | 기술         | 내용                                                         |
 | ------------ | ------------------------------------------------------------ |

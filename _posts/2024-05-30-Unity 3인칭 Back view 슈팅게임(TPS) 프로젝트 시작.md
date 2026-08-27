@@ -2,7 +2,7 @@
 title: "Unity 3인칭 Back view 슈팅게임(TPS) 프로젝트 시작"
 description: "3인칭 시점의 카메라는 비주얼적으로도 비즈니스 적으로도 이점이 강한 카메라 뷰이다. 1인칭과 다르게 플레이어가 조작하는 캐릭터의 외형을 모두 살펴볼 수 있으며, 1인칭 보다 시야각이 훨씬 넓어 플레이어가 비교적 덜 답답하게 느낄 수 있기 때문이다."
 date: 2024-05-30T08:34:43.217Z
-tags: ["c#","unity"]
+tags: ["csharp","unity"]
 categories: [Project, TPSProject]
 ---
 ## **서론**

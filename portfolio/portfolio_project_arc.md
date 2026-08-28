@@ -66,7 +66,7 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 
 [[Project CM] 클라이언트 동기화를 위한 로딩 시퀀스 구현]({% post_url 2025-10-29-[Project CM] 클라이언트 동기화를 위한 로딩 시퀀스 구현 %})
 
-[[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안]({% post_url 2025-10-30-[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안 %})
+[[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안]({% post_url 2025-10-30-[Project CM] PlayerState 추가제거 함수 문제 발견 및 해결 방안 %})
 
 [[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결]({% post_url 2025-10-31-[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결 %})
 

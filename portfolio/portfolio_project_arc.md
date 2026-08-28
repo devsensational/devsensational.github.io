@@ -29,7 +29,7 @@ permalink: /portfolio/portfolio_project_arc/
 
 ![실제 생성된 지형](/assets/images/portfolio_project_arc_images/image%201.png)
 
-> **시드 기반 Procedural Map + 데이터 기반 맵 생성 구조를 통해, 확장성과 성능을 동시에 확보한 맵 생성 시스템을 설계·구현했습니다.**
+>**시드 기반 Procedural Map + 데이터 기반 맵 생성 구조를 통해, 확장성과 성능을 동시에 확보한 맵 생성 시스템을 설계/구현했습니다.**
 
 #### 기술적 포인트
 
@@ -110,7 +110,7 @@ permalink: /portfolio/portfolio_project_arc/
 
 ### 2. NPC Dialogue & Action 시스템 구현
 
-> **Tree 기반 Dialogue 구조와 Action 시스템을 결합하여, 분기형 대화와 게임 로직 실행을 동시에 처리하는 데이터 기반 NPC 상호작용 시스템을 설계·구현했습니다.**
+>**Tree 기반 Dialogue 구조와 Action 시스템을 결합하여, 분기형 대화와 게임 로직 실행을 동시에 처리하는 데이터 기반 NPC 상호작용 시스템을 설계/구현했습니다.**
 
 ![56.gif](/assets/images/portfolio_project_arc_images/56.gif)
 

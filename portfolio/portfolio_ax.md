@@ -32,7 +32,7 @@ permalink: /portfolio/portfolio_ax/
 ### API 요청을 위한 JSON 및 프롬프트 보기
 
 {% raw %}
-```json
+```
 {{
 {
   model: "qwen3.5:9b",
@@ -146,7 +146,7 @@ ${$json.patch}`
     - 단순 문법 검사가 아닌 실무 표준에 맞춘 7가지 핵심 리뷰 기준 확립 (버그 위험도, NullReferenceException 위험, 성능, 유지보수성 등)
     - 불필요한 인사말이나 부연 설명을 배제하고, 아래 구조로만 출력하도록 강제하여 가독성 극대화
     
-    ```jsx
+    ```
     ## 전체 평가
     ## 주요 문제점
     ## 잘된 점

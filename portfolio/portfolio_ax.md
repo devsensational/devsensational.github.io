@@ -1,0 +1,165 @@
+---
+layout: page
+title: "개발 생산성 향상을 위한 AI 코드 리뷰 자동화 구축(AX, n8n, Ollama, Docker)"
+permalink: /portfolio/portfolio_ax/
+---
+
+## 프로젝트 소개
+
+본 프로젝트는 게임 클라이언트 개발 과정에서 발생하는 코드 리뷰의 병목 현상을 해소하고, 일관된 코드 품질을 유지하기 위해 기획된 **AI 기반 자동화 파이프라인**입니다. Docker 환경 위에 구축된 n8n과 로컬 LLM(Ollama)을 연동하여, GitHub Pull Request가 생성될 때마다 AI가 자동으로 코드를 분석하고 실무 표준에 맞는 리뷰를 남기는 시스템을 구현했습니다. 특히 외부 API 의존 없이 로컬 환경에서 동작하도록 구성하여 소스코드 유출에 대한 보안성을 높이고 API 호출 비용을 제거했습니다.
+
+## 프로젝트 목표
+
+- **리뷰 소요 시간 단축:** PR 리뷰 대기 시간을 최소화하여 개발팀의 전반적인 작업 속도(Velocity) 및 이터레이션 속도 향상
+- **코드 품질 및 안정성 표준화:** 사전에 정의된 엄격한 시스템 프롬프트를 통해 버그 위험, 생명주기(Lifecycle) 오류, 성능 저하 요인 등을 일관되게 탐지
+- **보안 및 비용 효율성 확보:** Docker 및 로컬 LLM 아키텍처를 통한 On-Premises 구축 경험
+
+## 시스템 흐름
+
+![image.png](/assets/images/portfolio_ax_images/image.png)
+
+- **GitHub Trigger:** 대상 저장소에 새로운 Pull Request가 생성되거나 업데이트될 때 Webhook을 통해 자동으로 워크플로우가 시작됩니다.
+- **HTTP Request (PR 대상 파일 조회):** GitHub API(`{% raw %}{{ $json.body.pull_request.url + "/files" }}{% endraw %}`)를 호출하여 PR에 포함된 변경된 파일 목록을 가져옵니다.
+- **Code in JavaScript (필터링):** 변경된 파일 중 게임 클라이언트 스크립트에 해당하는 `.cs` (C#) 파일만 추출하여 다음 노드로 전달합니다.
+- **HTTP Request (로컬 LLM 분석):** 필터링된 코드 패치를 Docker 내부의 Ollama(`qwen3.5:9b`) API로 POST 요청합니다. 이때 Unity/C# 환경에 특화된 프롬프트를 적용하여 유지보수성, 성능, 아키텍처 문제를 집중적으로 분석하도록 지시합니다.
+
+### API 요청을 위한 JSON 및 프롬프트 보기
+
+{% raw %}
+```json
+{{
+{
+  model: "qwen3.5:9b",
+  stream: false,
+  messages: [
+    {
+      role: "system",
+      content: `Unity C# code review task.
+
+Role:
+- Review Unity C# scripts using practical Unity and C# development standards.
+- Focus on maintainability, stability, structure, readability, and performance.
+- Do not change the original intent of the code.
+
+Strict output rules:
+- Respond in Korean only.
+- Do not use English in the response.
+- Do not include greetings, introductions, or self-introduction.
+- Do not roleplay as an assistant.
+- Do not add unnecessary compliments or filler text.
+- Keep responses concise and practical like a real code review.
+- Do not make assumptions about code that was not provided.
+- If uncertain, explicitly say "가능성이 있습니다".
+
+Review priority:
+1. Bug risks
+2. NullReferenceException risks
+3. Unity lifecycle issues
+4. Maintainability
+5. Structure and responsibility separation
+6. Performance
+7. Style and conventions
+
+Always check:
+- Proper use of SerializeField
+- Overuse of public fields
+- Unnecessary operations inside Update
+- Repeated GetComponent/Find calls
+- Event subscription/unsubscription issues
+- Inspector assignment risks
+- Magic numbers
+- Duplicate code
+- Long methods
+- Excessive class responsibilities
+- Naming conventions
+- Null safety
+- Collection access safety
+- Coroutine safety
+
+Severity levels:
+- Critical: Crash or incorrect behavior risk
+- Warning: Maintainability, structure, or performance issue
+- Suggestion: Recommended improvement
+- Style: Naming, formatting, or convention issue
+
+Output format:
+
+## 전체 평가
+- Summarize the overall state in 2~4 sentences
+- Mention the highest priority issue first
+
+## 주요 문제점
+
+### [Critical|Warning|Suggestion|Style] 제목
+- 설명:
+- 이유:
+- 개선안:
+- 예시:
+
+(repeat as needed)
+
+## 잘된 점
+- Only include if genuinely meaningful
+
+## 개선 우선순위
+1.
+2.
+3.
+
+Additional rules:
+- Consider Unity Inspector assignment behavior.
+- Prefer [SerializeField] for private fields exposed to Inspector.
+- Only mention performance issues when there is a realistic cost.
+- Clearly distinguish team convention issues from objective problems.
+
+Important:
+- Maintain the exact output structure.
+- Do not output unnecessary text outside the review sections.
+- Do not generate greetings or conversational filler.
+- Do not explain what you are going to do.
+- Start directly with the review output.
+
+Now review the provided Unity C# code.
+
+파일명:
+${$json.filename}
+
+Patch:
+${$json.patch}`
+    }
+  ]
+}
+}}
+```
+{% endraw %}
+
+## 결과물
+
+- **n8n 자동화 워크플로우 연동:** GitHub - n8n - Ollama를 잇는 무인 파이프라인 구축 완료
+- **게임 개발 특화 AI 시스템 프롬프트 엔지니어링:**
+    - 단순 문법 검사가 아닌 실무 표준에 맞춘 7가지 핵심 리뷰 기준 확립 (버그 위험도, NullReferenceException 위험, 성능, 유지보수성 등)
+    - 불필요한 인사말이나 부연 설명을 배제하고, 아래 구조로만 출력하도록 강제하여 가독성 극대화
+    
+    ```jsx
+    ## 전체 평가
+    ## 주요 문제점
+    ## 잘된 점
+    ## 개선 우선순위
+    ```
+
+### 실제 결과물 예시 보기
+
+![스크린샷 2026-05-14 153452.png](/assets/images/portfolio_ax_images/image2.png)
+
+## 성과
+
+- **휴먼 에러 사전 차단:** 개발자가 놓치기 쉬운 `Update` 문 내부의 무거운 연산, 불필요한 `GetComponent` 호출, 코루틴 안전성 등의 이슈를 AI가 1차적으로 필터링하여 런타임 크래시 발생률 감소.
+- **개발자 피로도 감소:** 시니어 개발자가 단순 컨벤션이나 기본적인 구조적 결함을 리뷰하는 데 사용하는 시간을 대폭 절감하여, 핵심 시스템 기획 및 아키텍처 설계에 집중할 수 있는 환경 조성.
+
+## 교훈
+
+- 초대형 클라우드에서 서비스하는 프론티어 모델에 비해 성능이 비교적 아쉽다는 것을 느낌
+- 코딩 컨벤션, 병목을 발생시키는 유명한 문제에 대해서는 잘 캐치하지만 주어진 코드의 맥락, 목적을 알아야지만 조언할 수 있는 부분에 대해서는 리뷰하지 못함
+  - **주어진 단일 파일의 코드 섹션만 읽고 코드 작성 당시의 맥락과 목적은 전달되지 않기 때문**
+- 따라서, AI 코드 리뷰는 오류 초기 탐지에는 유용하지만, AI의 코드 리뷰를 전적으로 신뢰하고 실제 릴리즈까지 이뤄지는 것은 아직 무리가 있다고 느낌
+- 조금이라도 맥락과 목적을 AI에게 전달하려면 코드 작성 때 부터 에이전트와 함께 작성을 하거나 상세한 주석을 통해 의도를 전달해야 하며, **여전히 팀원들과 함께 커뮤니케이션을 자주 하는게 중요하다고 생각함**

@@ -18,7 +18,7 @@ title: PORTFOLIO
   /* 카드 전체 컨테이너 */
   .pf-card {
     display: flex;
-    align-items: center; /* stretch에서 center로 변경: 텍스트 길이에 의해 이미지가 기형적으로 길어지는 현상 방지 */
+    align-items: stretch; /* ★ 다시 stretch로 변경: 빈틈없이 상하단을 꽉 채움 */
     border-radius: 12px;
     border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15));
     background-color: transparent;
@@ -40,14 +40,15 @@ title: PORTFOLIO
     margin: 0; 
     padding: 0; 
     border-right: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15)); 
+    display: flex; /* ★ 핵심 추가: 이미지가 카드의 100% 높이를 완벽하게 상속받도록 돕는 역할 */
   }
 
   .pf-img-area img {
     width: 100%;
-    height: 100%;
-    aspect-ratio: 4 / 3; /* 이미지 영역을 4:3 비율로 강제 고정 */
-    object-fit: cover; /* 비율을 유지하면서 꽉 채우고, 넘치는 부분은 자동 크롭 */
-    object-position: center; /* 크롭될 때 상하좌우 치우치지 않고 정중앙을 기준으로 자름 */
+    height: 100%; /* 부모의 높이에 빈틈없이 맞춤 */
+    /* aspect-ratio 제거: 고정 비율을 없애고 영역 전체를 덮도록 변경 */
+    object-fit: cover; /* 영역을 꽉 채우고 남는 부분은 잘라냄 */
+    object-position: center; /* 자를 때 상하좌우 정중앙을 기준으로 함 */
     display: block;
   }
 
@@ -80,11 +81,10 @@ title: PORTFOLIO
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 10;
-    border: none !important; /* Chirpy 테마의 오렌지색 밑줄 효과 강제 제거 */
+    border: none !important; 
     text-decoration: none !important; 
   }
   
-  /* 마우스를 올렸을 때도 오렌지색 선이 생기지 않도록 차단 */
   .pf-click-overlay:hover {
     border: none !important;
   }

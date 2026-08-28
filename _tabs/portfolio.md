@@ -18,7 +18,7 @@ title: PORTFOLIO
   /* 카드 전체 컨테이너 */
   .pf-card {
     display: flex;
-    align-items: stretch; /* ★ 다시 stretch로 변경: 빈틈없이 상하단을 꽉 채움 */
+    align-items: stretch; /* 상하단을 꽉 채움 */
     border-radius: 12px;
     border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15));
     background-color: transparent;
@@ -28,7 +28,6 @@ title: PORTFOLIO
     transition: background-color 0.3s ease;
   }
 
-  /* 마우스 호버(Hover) 시 연한 회색으로 서서히 덮이는 효과 */
   .pf-card:hover {
     background-color: var(--card-hover-bg, rgba(128, 128, 128, 0.12)); 
   }
@@ -40,15 +39,23 @@ title: PORTFOLIO
     margin: 0; 
     padding: 0; 
     border-right: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15)); 
-    display: flex; /* ★ 핵심 추가: 이미지가 카드의 100% 높이를 완벽하게 상속받도록 돕는 역할 */
+    position: relative; /* 내부 이미지가 꽉 채워질 기준점이 됨 */
+  }
+
+  /* Jekyll이 자동으로 생성할 수 있는 <p> 태그의 여백 제거 */
+  .pf-img-area p {
+    margin: 0;
+    padding: 0;
   }
 
   .pf-img-area img {
+    position: absolute; /* 부모 영역을 빈틈없이 덮도록 변경 */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%; /* 부모의 높이에 빈틈없이 맞춤 */
-    /* aspect-ratio 제거: 고정 비율을 없애고 영역 전체를 덮도록 변경 */
-    object-fit: cover; /* 영역을 꽉 채우고 남는 부분은 잘라냄 */
-    object-position: center; /* 자를 때 상하좌우 정중앙을 기준으로 함 */
+    height: 100%; 
+    object-fit: cover; /* 이미지가 찌그러지지 않고 영역을 꽉 채우며 남는 부분을 자름 */
+    object-position: center; /* 자를 때 중앙을 기준으로 정렬 */
     display: block;
   }
 

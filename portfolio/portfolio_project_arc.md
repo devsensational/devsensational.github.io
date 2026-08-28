@@ -12,8 +12,9 @@ permalink: /portfolio/portfolio_project_arc/
 - **프로젝트 명:** Project Arc
 - **역할**
     - GameMode 및 State 구현
+    - 로딩 시퀀스 및 클라이언트 동기화 시스템 구현
     - 절차적 맵 생성 구현
-    - Tree형 NPC 대화 및 액션 구현
+    - Tree형 NPC 대화 및 액션(상호작용) 구현
     - 서버권위 상점 구현
 - **개발 환경**
     - Unreal 5.6.1

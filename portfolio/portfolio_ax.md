@@ -161,3 +161,11 @@ ${$json.patch}`
 
 - **휴먼 에러 사전 차단:** 개발자가 놓치기 쉬운 `Update` 문 내부의 무거운 연산, 불필요한 `GetComponent` 호출, 코루틴 안전성 등의 이슈를 AI가 1차적으로 필터링하여 런타임 크래시 발생률 감소
 - **개발자 피로도 감소:** 시니어 개발자가 단순 컨벤션이나 기본적인 구조적 결함을 리뷰하는 데 사용하는 시간을 대폭 절감하여, 핵심 시스템 기획 및 아키텍처 설계에 집중할 수 있는 환경 조성
+
+<br><br>
+
+<div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+  <a href="/portfolio/" style="display: inline-block; padding: 14px 28px; font-size: 1.05rem; font-weight: 600; color: #495057; background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: all 0.2s ease-in-out;">
+    <i class="fas fa-arrow-left" style="margin-right: 8px; color: #6c757d;"></i> 포트폴리오 리스트로 돌아가기
+  </a>
+</div>

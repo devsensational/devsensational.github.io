@@ -105,7 +105,7 @@ title: PORTFOLIO
     <img src="/assets/images/portfolio_project_arc_images/thumbnail.png" alt="Project Arc thumbnail">
   </div>
   <div class="pf-text-area">
-    <h3 class="pf-title">Project Arc</h3>
+    <h3 class="pf-title">Project Arc (Project CM)</h3>
     <p class="pf-desc">Unreal 5, 절차적 맵 생성, 네트워크 동기화 문제 해결 등</p>
   </div>
 </div>

@@ -83,12 +83,10 @@ title: PORTFOLIO
 
 <!-- 포트폴리오 아이템 1 -->
 <div class="pf-card">
-  <a href="/portfolio/portfolio_1/" class="pf-click-overlay"></a>
-  
+  <a href="/portfolio/portfolio_project_arc/" class="pf-click-overlay"></a>
   <div class="pf-img-area">
-    <img src="/assets/images/portfolio1/image.png" alt="Project Arc 썸네일">
+    <img src="/assets/images/portfolio_project_arc_images/image.png" alt="Project Arc thumbnail">
   </div>
-  
   <div class="pf-text-area">
     <h3 class="pf-title">Project Arc</h3>
     <p class="pf-desc">Unreal 5, 절차적 맵 생성, 네트워크 동기화 문제 해결 등</p>
@@ -98,11 +96,9 @@ title: PORTFOLIO
 <!-- 포트폴리오 아이템 2 -->
 <div class="pf-card">
   <a href="/portfolio/portfolio_corner_node_algorithm/" class="pf-click-overlay"></a>
-  
   <div class="pf-img-area">
     <img src="/assets/images/portfolio_corner_node_algorithm_images/28.png" alt="MR 환경 내비게이션 썸네일">
   </div>
-  
   <div class="pf-text-area">
     <h3 class="pf-title">MR 환경 내비게이션 개발 프로젝트</h3>
     <p class="pf-desc">대학 연구 과제, SCI-E 논문 1저자 등재, Unity, Pathfinding 최적화 등</p>
@@ -112,11 +108,9 @@ title: PORTFOLIO
 <!-- 포트폴리오 아이템 3 -->
 <div class="pf-card">
   <a href="/portfolio/portfolio_ax/" class="pf-click-overlay"></a>
-  
   <div class="pf-img-area">
     <img src="/assets/images/portfolio_ax_images/image.png" alt="AI 코드 리뷰 썸네일">
   </div>
-  
   <div class="pf-text-area">
     <h3 class="pf-title">개발 생산성 향상을 위한 AI 코드 리뷰 자동화 구축</h3>
     <p class="pf-desc">AX, n8n, Ollama, Docker, 커뮤니케이션의 중요성 등</p>

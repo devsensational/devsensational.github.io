@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project Arc(Project CM)"
+title: "Project Arc (Project CM)"
 permalink: /portfolio/portfolio_project_arc/
 ---
 
@@ -9,7 +9,7 @@ permalink: /portfolio/portfolio_project_arc/
 
 ![image.png](/assets/images/portfolio_project_arc_images/image.png)
 
-- **프로젝트 명:** Project Arc (Project CM에서 피벗 됨)
+- **프로젝트 명:** Project Arc (Project CM)
 - **역할**
     - GameMode 및 State 구현
     - 로딩 시퀀스 및 클라이언트 동기화 시스템 구현

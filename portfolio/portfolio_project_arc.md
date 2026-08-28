@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project Arc (Unreal, 절차적 맵 생성, 네트워크 최적화 등)"
+title: "Project Arc"
 permalink: /portfolio/portfolio_project_arc/
 ---
 
@@ -25,7 +25,53 @@ permalink: /portfolio/portfolio_project_arc/
 ## 핵심 기능
 ---
 
-### 1. 시드 기반 **Procedural Map** 생성
+### 1. 로비 및 클라이언트 동기화 시스템 (네트워크 최적화)
+
+> **안정적인 멀티플레이 로비 환경을 위해 클라이언트 로딩 시퀀스를 제어하고, 네트워크 비동기성으로 인한 동기화 경합 문제를 해결한 시스템을 설계/구현했습니다.**
+
+#### 기술적 포인트
+
+- **클라이언트 로딩 시퀀스 제어 (로딩 3단계 분리)**
+    - 동기화 대상 컴포넌트 준비 완료 후 `OnLoadBegin` → `OnLoadUI` → `OnLoadCompleted` 3단계 순차 로딩 진행
+    - 각 단계를 `NextTick`으로 예약 및 브로드캐스트하여 안정적인 초기화 보장
+    - 팀원들이 로딩 시퀀스에 기능을 쉽게 추가할 수 있도록 `DECLARE_MULTICAST_DELEGATE`를 통한 바인딩 지원
+    - 블루프린트에 노출되지 않는 C++ 전용 델리게이트를 사용함으로써, 무분별한 외부 접근으로 인해 객체지향의 캡슐화가 훼손되고 의존성이 꼬이는 문제를 방지
+- **PlayerState Replicated 변수 동기화 경합 해결 (상세 내용은 트러블 슈팅 1번 항목 참조)**
+    - `BeginPlay`와 `OnRep` 간 네트워크 초기화 비동기 문제로 인한 로비 접속자 리스트 누락/중복 현상 해결
+    - `SetTimerForNextTick`을 활용, `GameState` 초기화 완료 시점까지 처리 지연 및 안전한 목록 추가 보장
+    - `bAddedToLobby` 플래그 도입으로 `REPNOTIFY_Always` 재호출 상황에서도 멱등성 확보
+- **안정적인 플레이어 세션(입퇴장) 관리**
+    - 서버 Authority 환경 및 특수 로그인 흐름에서 누락되는 기존 `AddPlayerState` / `RemovePlayerState` 구조 개선
+    - `GameMode`의 `PostLogin` / `Logout` 오버라이드 및 이벤트를 통한 `GameState` 브로드캐스트 적용
+
+#### 핵심 기여
+
+- 클라이언트 로딩 시퀀스 및 멀티플레이 로비 제어 구조 **전체 설계 및 구현**
+- 비동기 네트워크 환경에서의 상태 동기화 및 렌더링 경합 문제 해결
+- 서버 권한 기반의 안정적인 세션 입장/퇴장 파이프라인 구축
+
+#### 실행 결과
+
+![로딩 시퀀스 순차 실행](/assets/images/old/bd70a123-80c5-44c4-b779-6563b9b1f387-image.png)
+_Sync가 모두 완료된 후 차례대로 Load 메소드를 실행하는 것을 볼 수 있습니다_
+
+![로비 플레이어 리스트 출력](/assets/images/old/c35883c4-fd0f-4213-a6ef-5f5cfab54cc9-image.png)
+_본인을 제외한 다른 클라이언트들이 로비 리스트에 정상적으로 출력됩니다_
+
+![입퇴장 호출 검증](/assets/images/old/7e09ef98-acf9-4b3b-a753-49c38cb7c318-image.png)
+_GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 호출됨을 검증했습니다_
+
+#### 구현 과정
+
+[[Project CM] 클라이언트 동기화를 위한 로딩 시퀀스 구현]({% post_url 2025-10-29-[Project CM] 클라이언트 동기화를 위한 로딩 시퀀스 구현 %})
+
+[[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안]({% post_url 2025-10-30-[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안 %})
+
+[[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결]({% post_url 2025-10-31-[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결 %})
+
+---
+
+### 2. 시드 기반 **Procedural Map** 생성
 
 ![실제 생성된 지형](/assets/images/portfolio_project_arc_images/image%201.png)
 
@@ -108,7 +154,7 @@ permalink: /portfolio/portfolio_project_arc/
 
 ---
 
-### 2. NPC Dialogue & Action 시스템 구현
+### 3. NPC Dialogue & Action 시스템 구현
 
 >**Tree 기반 Dialogue 구조와 Action 시스템을 결합하여, 분기형 대화와 게임 로직 실행을 동시에 처리하는 데이터 기반 NPC 상호작용 시스템을 설계/구현했습니다.**
 
@@ -178,7 +224,7 @@ permalink: /portfolio/portfolio_project_arc/
 
 ---
 
-### 3. 서버 권한 기반 Shop 시스템 & 데이터 기반 상점 고도화
+### 4. 서버 권한 기반 Shop 시스템 & 데이터 기반 상점 고도화
 
 ![35.gif](/assets/images/portfolio_project_arc_images/35.gif)
 
@@ -252,7 +298,39 @@ permalink: /portfolio/portfolio_project_arc/
 ## 트러블 슈팅
 ---
 
-### 1. 맵 생성 시 Entrance 비정상 생성 문제 해결
+### 1. 멀티플레이 환경의 PlayerState 네트워크 동기화 경합 및 중복 문제 해결
+
+#### 문제 상황
+- 로비에서 클라이언트 접속 시, 서버에서 클라이언트로 `PlayerState`의 닉네임(`PendingNickname`)을 동기화하는 과정에서 두 가지 치명적인 문제가 발생
+- **누락 문제:** 간헐적으로 로비 접속자 리스트에 접속한 플레이어의 닉네임이 정상적으로 등록되지 않음
+- **중복 문제:** 동일한 플레이어가 리스트에 여러 번 중복 추가되는 현상 발생
+
+#### 원인 분석
+- **네트워크 복제와 월드 초기화의 비동기성 (타이밍 경합):**
+    - 언리얼 엔진 네트워크 흐름 상 `PlayerState`의 Replicated 변수들이 클라이언트에 도착하는 시점이 맵의 `BeginPlay()` 시점과 일치한다고 보장할 수 없음
+    - 변수가 복제되어 `OnRep` 콜백이 정상적으로 호출되더라도, 그 시점에 로비 리스트를 관리하는 `GameState`가 아직 셋업되지 않았다면 (null 상태) 참조에 실패하여 리스트 추가가 무시되는 타이밍 경합이 발생함
+- **복제 알림의 재진입:**
+    - 클라이언트 측에서 확실한 동기화를 위해 `REPNOTIFY_Always` 옵션을 사용했으나, 이로 인해 변수 값이 동일하더라도 `OnRep`이 지속적으로 호출되며 리스트 추가 로직이 중복으로 실행될 여지가 있었음
+
+#### 해결 방법
+**1. SetTimerForNextTick을 활용한 초기화 경합 해결**
+- `OnRep` 호출 시 `GameState`의 존재 여부를 먼저 확인
+- `GameState`가 아직 준비되지 않았다면 실패 처리하지 않고, `SetTimerForNextTick`을 활용해 **리스트 갱신 로직 실행을 다음 프레임(Tick)으로 연기시킴으로써 월드 초기화 완료 이후의 안전한 데이터 접근을 보장**
+
+**2. 가드 플래그(bAddedToLobby)를 통한 멱등성 보장**
+- `PlayerState` 내부에 `bAddedToLobby` 상태 플래그를 추가
+- 로비 리스트에 이미 추가된 상태라면 조기 종료(Return) 처리하여, `REPNOTIFY_Always` 설정으로 인한 `OnRep` 다중 호출이나 지연 처리 상황에서도 단 1회만 등록되도록 방어 로직 구현
+
+**3. 초기값 명시로 확실한 복제 시점 제공**
+- 서버의 `BeginPlay()`에서 `PendingNickname`의 초기값을 명확하게 셋업하여 Replication 파이프라인이 안정적으로 시작되도록 유도
+
+#### 결과
+- 단일/다중 클라이언트 동시 접속이나 느린 초기화 시뮬레이션 환경에서도 리스트 누락이나 렌더링 꼬임 없이 유저 목록이 1회씩 정상 등록됨을 보장
+- 로비 씬과 같이 데이터 복제 직후 다른 서브시스템과 즉시 상호작용해야 하는 환경에서의 네트워크 초기화 안정성을 대폭 향상
+
+---
+
+### 2. 맵 생성 시 Entrance 비정상 생성 문제 해결
 
 #### 문제 상황
 
@@ -336,7 +414,7 @@ permalink: /portfolio/portfolio_project_arc/
 
 ---
 
-### 2. GameStarter NPC 구현 및 Remote Client 필터링 문제 해결
+### 3. GameStarter NPC 구현 및 Remote Client 필터링 문제 해결
 
 ![57.gif](/assets/images/portfolio_project_arc_images/57.gif)
 

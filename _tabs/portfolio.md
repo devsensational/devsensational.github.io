@@ -101,7 +101,7 @@ title: PORTFOLIO
 <div class="pf-card">
   <a href="/portfolio/portfolio_project_arc/" class="pf-click-overlay"></a>
   <div class="pf-img-area">
-    <img src="/assets/images/portfolio_project_arc_images/image.png" alt="Project Arc thumbnail">
+    <img src="/assets/images/portfolio_project_arc_images/thumbnail.png" alt="Project Arc thumbnail">
   </div>
   <div class="pf-text-area">
     <h3 class="pf-title">Project Arc</h3>

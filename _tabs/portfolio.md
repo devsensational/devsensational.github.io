@@ -4,13 +4,13 @@ order: 4
 title: PORTFOLIO
 ---
 
-## 기본기에 충실하고, 성장을 즐기는 신입 개발자입니다
+## 기본기에 충실하고, 성장을 즐기는 신입 개발자입니다!
 
 
 >- 절차적 맵 생성, 매치메이킹, UI 등 프로젝트를 통한 다양한 분야 구현 경험 (C++, C#)
 >- 10회 이상의 팀 리더 경험과 시행착오로 길러진 커뮤니케이션 스킬
 >- 연구 과제 최적화 경험 및 논문 작성 경험 (SCI-E 저널 1저자)
->- **AI/AX 기반 자동화를 통해 개발 생산성과 반복 업무 효율을 극대화하는 개발자
+>- AI/AX 기반 자동화를 통해 개발 생산성과 반복 업무 효율을 극대화하는 개발자
 
 ---
 
@@ -18,14 +18,14 @@ title: PORTFOLIO
   /* 카드 전체 컨테이너 */
   .pf-card {
     display: flex;
-    align-items: stretch; /* 이미지가 텍스트 높이에 맞춰 꽉 차도록 설정 */
-    border-radius: 12px; /* 카드 전체의 둥근 모서리 */
-    border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15)); /* Chirpy 스타일의 얇은 테두리 */
+    align-items: center; /* stretch에서 center로 변경: 텍스트 길이에 의해 이미지가 기형적으로 길어지는 현상 방지 */
+    border-radius: 12px;
+    border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15));
     background-color: transparent;
-    overflow: hidden; /* ★핵심: 내부 이미지가 카드 모서리 밖으로 삐져나가지 않고 딱 맞게 잘리도록 함 */
+    overflow: hidden;
     margin-bottom: 2rem;
     position: relative;
-    transition: background-color 0.3s ease; /* 서서히 색상이 변하는 애니메이션 효과 */
+    transition: background-color 0.3s ease;
   }
 
   /* 마우스 호버(Hover) 시 연한 회색으로 서서히 덮이는 효과 */
@@ -35,17 +35,19 @@ title: PORTFOLIO
 
   /* 왼쪽 이미지 영역 */
   .pf-img-area {
-    flex: 0 0 30%; /* 이미지 영역 비율 (필요에 따라 조절) */
+    flex: 0 0 30%; 
     max-width: 250px;
     margin: 0; 
-    padding: 0; /* 여백 제거로 경계선에 딱 맞춤 */
-    border-right: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15)); /* 이미지와 텍스트 사이 구분선 */
+    padding: 0; 
+    border-right: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.15)); 
   }
 
   .pf-img-area img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 비율 찌그러짐 방지 및 꽉 채움 */
+    aspect-ratio: 4 / 3; /* 이미지 영역을 4:3 비율로 강제 고정 */
+    object-fit: cover; /* 비율을 유지하면서 꽉 채우고, 넘치는 부분은 자동 크롭 */
+    object-position: center; /* 크롭될 때 상하좌우 치우치지 않고 정중앙을 기준으로 자름 */
     display: block;
   }
 
@@ -78,6 +80,13 @@ title: PORTFOLIO
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 10;
+    border: none !important; /* Chirpy 테마의 오렌지색 밑줄 효과 강제 제거 */
+    text-decoration: none !important; 
+  }
+  
+  /* 마우스를 올렸을 때도 오렌지색 선이 생기지 않도록 차단 */
+  .pf-click-overlay:hover {
+    border: none !important;
   }
 </style>
 

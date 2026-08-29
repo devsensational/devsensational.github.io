@@ -378,6 +378,7 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 #### 해결 과정
 
 [[Project Arc] 맵 생성 시 Entrance 비정상 생성 문제 해결]({% post_url 2025-11-24-[Project Arc] 맵 생성 시 Entrance 비정상 생성 문제 해결 %})
+
 ---
 
 ### 3. GameStarter NPC 구현 및 Remote Client 필터링 문제 해결

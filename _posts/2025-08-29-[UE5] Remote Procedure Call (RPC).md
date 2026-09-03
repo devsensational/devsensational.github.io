@@ -16,6 +16,7 @@ RPC란, UFUNCTION에 네트워킹 플래그를 달아 네트워크 너머에서 
 - 실행: 서버에서 실행
 - 조건: 호출하는 클라이언트가 액터의 소유자(Owner) 여야 함
 - 용도: 입력 전달(총 발사, 점프 등), 서버 권위 판정, 게임 규칙 변경
+
 ```cpp
 // MyCharacter.h
 UCLASS()
@@ -48,14 +49,15 @@ void AMyCharacter::ServerFire_Implementation(const FVector_NetQuantize& AimDir)
 
     // 예시: 라인 트레이스 → 적중 판정 → 상태 갱신
 }
-
 ```
+
 ### 2. Client RPC (Run on Owning Client)
 
 - 선언: UFUNCTION(Client, Reliable/Unreliable)
 - 호출: 서버 → 특정 클라이언트
 - 실행: 해당 액터의 소유 클라이언트에서 실행
 - 용도: 서버에서 판정 후 특정 플레이어에게만 보여줄 UI/이펙트 (e.g. 히트마커, HUD 알림)
+
 ```cpp
 UCLASS()
 class AMyCharacter : public ACharacter

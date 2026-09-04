@@ -15,7 +15,7 @@ math: true
 
 ### 원문 출처
 > [https://github.com/microsoft/STL/blob/main/stl/inc/type_traits](https://github.com/microsoft/STL/blob/main/stl/inc/type_traits)
-> (https://en.cppreference.com/cpp/utility/move)[https://en.cppreference.com/cpp/utility/move]
+> [https://en.cppreference.com/cpp/utility/move](https://en.cppreference.com/cpp/utility/move)
 
 ---
 

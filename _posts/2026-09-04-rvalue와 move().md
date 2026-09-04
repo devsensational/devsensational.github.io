@@ -1,5 +1,5 @@
 ---
-title: 2026-09-04-rvalue와 move()
+title: rvalue와 move()
 date: 2026-09-04 16:09 +0900
 category: [CPP]
 tags: ["cpp"]

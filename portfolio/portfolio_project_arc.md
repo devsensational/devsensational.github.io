@@ -23,8 +23,9 @@ permalink: /portfolio/portfolio_project_arc/
 - **기간:** 2025.10.28 ~ 2026.01.12
 - **인원:** 8명
 
-## 핵심 기능
 ---
+
+## 핵심 기능
 
 ### 1. 로비 및 클라이언트 동기화 시스템
 
@@ -67,10 +68,6 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 [[Project CM] 클라이언트 동기화를 위한 로딩 시퀀스 구현]({% post_url 2025-10-29-[Project CM] 클라이언트 동기화를 위한 로딩 시퀀스 구현 %})
 
 [[Project CM] PlayerState 추가/제거 함수 문제 발견 및 해결 방안]({% post_url 2025-10-30-[Project CM] PlayerState 추가제거 함수 문제 발견 및 해결 방안 %})
-
-[[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결]({% post_url 2025-10-31-[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결 %})
-
----
 
 ### 2. 시드 기반 **Procedural Map** 생성
 
@@ -153,8 +150,6 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 
 [[Project Arc] 데이터 기반 Procedural Map Generator + 레벨 스트리밍 구현]({% post_url 2025-11-19-[Project Arc] 데이터 기반 Procedural Map Generator + 레벨 스트리밍 구현 %})
 
----
-
 ### 3. NPC Dialogue & Action 시스템 구현
 
 >**Tree 기반 Dialogue 구조와 Action 시스템을 결합하여, 분기형 대화와 게임 로직 실행을 동시에 처리하는 데이터 기반 NPC 상호작용 시스템을 설계/구현했습니다.**
@@ -222,8 +217,6 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 [[Project Arc] Tree 구조의 Dialogue 시스템 구현]({% post_url 2025-12-09-[Project Arc] Tree 구조의 Dialogue 시스템 구현 %})
 
 [[Project Arc] NPC Dialogue & Action 시스템 1차 구현 완료]({% post_url 2025-12-12-[Project Arc] NPC Dialogue & Action 시스템 1차 구현 완료 %})
-
----
 
 ### 4. 서버 권한 기반 Shop 시스템 & 데이터 기반 상점 고도화
 
@@ -296,8 +289,9 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 
 [[Project Arc] 상점 기능 고도화 (컨텐츠 정보 반영, 개수 증감 버튼 등)]({% post_url 2025-12-30-[Project Arc] 상점 기능 고도화 (컨텐츠 정보 반영, 개수 증감 버튼 등) %})
 
-## 트러블 슈팅
 ---
+
+## 트러블 슈팅
 
 ### 1. 멀티플레이 환경의 PlayerState 네트워크 동기화 경합 및 중복 문제 해결
 
@@ -326,10 +320,16 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 - 서버의 `BeginPlay()`에서 `PendingNickname`의 초기값을 명확하게 셋업하여 Replication 파이프라인이 안정적으로 시작되도록 유도
 
 #### 결과
+
+![로비 플레이어 리스트 출력](/assets/images/old/c35883c4-fd0f-4213-a6ef-5f5cfab54cc9-image.png)
+_핵심 기능 항목과 동일한 이미지이며, 이해를 돕기 위해 추가했습니다_
+
 - 단일/다중 클라이언트 동시 접속이나 느린 초기화 시뮬레이션 환경에서도 리스트 누락이나 렌더링 꼬임 없이 유저 목록이 1회씩 정상 등록됨을 보장
 - 로비 씬과 같이 데이터 복제 직후 다른 서브시스템과 즉시 상호작용해야 하는 환경에서의 네트워크 초기화 안정성을 대폭 향상
 
----
+#### 해결 과정
+
+[[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결]({% post_url 2025-10-31-[Project CM] SetTimerForNextTick을 활용한 PlayerState 동기화 시점 문제 해결 %})
 
 ### 2. 맵 생성 시 Entrance 비정상 생성 문제 해결
 
@@ -378,8 +378,6 @@ _GameMode PostLogin / Logout을 통해 입장 및 퇴장 이벤트가 확실히 
 #### 해결 과정
 
 [[Project Arc] 맵 생성 시 Entrance 비정상 생성 문제 해결]({% post_url 2025-11-24-[Project Arc] 맵 생성 시 Entrance 비정상 생성 문제 해결 %})
-
----
 
 ### 3. GameStarter NPC 구현 및 Remote Client 필터링 문제 해결
 

@@ -4,6 +4,8 @@ date: 2026-09-28 12:35 +0900
 category: [CPP]
 tags: [cpp]
 description: 재할당 전에 얻어 둔 element의 포인터/참조/반복자는 옛 주소를 그대로 들고 있음
+image:
+  path: /assets/images/2026-09-28/3.png
 math: true
 ---
 

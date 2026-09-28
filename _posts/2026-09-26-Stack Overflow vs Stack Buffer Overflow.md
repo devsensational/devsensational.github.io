@@ -3,7 +3,7 @@ title: Stack Overflow vs Stack Buffer Overflow
 date: 2026-09-26 13:44 +0900
 category: [Computer Science]
 tags: ["computer science"]
-description: 
+description: 자라나는 방향의 차이
 math: true
 ---
 

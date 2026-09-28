@@ -6,6 +6,7 @@ tags: ["cpp","math","algorithm"]
 image:
   path: /assets/images/old/9289d454-e34a-484a-8016-03f6519cd2a7-image.png
 categories: [Algorithm]
+math: true
 ---
 > 교점에 별 만들기
 https://school.programmers.co.kr/learn/courses/30/lessons/87377

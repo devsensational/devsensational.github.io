@@ -4,6 +4,8 @@ date: 2026-09-26 13:44 +0900
 category: [Computer Science]
 tags: ["computer science"]
 description: 자라나는 방향의 차이
+image:
+  path: /assets/images/2026-09-26-overflow/2.png
 math: true
 ---
 
@@ -22,7 +24,6 @@ math: true
 ## 방향
 
 ![](/assets/images/2026-09-26-overflow/2.png)
-_Gemini로 생성했습니다_
 
 - 스택은 높은 주소 → 낮은 주소로 자람
 - 배열 인덱스는 낮은 주소 → 높은 주소로 증가
@@ -55,15 +56,7 @@ _Gemini로 생성했습니다_
   - 저장된 레지스터 → 복귀 주소 → 호출한 함수의 프레임 순
   - 가드 페이지는 반대쪽이라 막지 못함
 
-```
-높은 주소
-  │ 호출한 함수의 프레임
-  │ 복귀 주소
-  │ 저장된 레지스터 (RBP 등)
-  │ int arr[16]  ← arr[16]부터 위로 덮어씀
-  ▼ 스택이 자라는 방향
-낮은 주소
-```
+![](/assets/images/2026-09-26-overflow/3.png)
 
 - 원인
   - 범위 검사 없는 쓰기, off-by-one (`i <= N`)

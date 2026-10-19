@@ -84,60 +84,6 @@ _서버 로그에서 GameMode PostLogin / Logout을 통해 입장 및 퇴장 이
     - 시작 방에서 BFS로 각 방까지의 거리를 계산하고, 가장 먼 리프 노드부터 보스 방으로 배치
     - 시작 방·보스 방을 제외한 좌표 중에서 보물 방을 랜덤 선정
     
-    **코드 스니펫**
-    
-    ```cpp
-    // 거리 계산(BFS)로 시작점에서의 거리 파악
-    TMap<FCMRoomPosition, int32> Distance;
-    Distance.Add(Start, 0);
-    TQueue<FCMRoomPosition> Q;
-    Q.Enqueue(Start);
-    while (!Q.IsEmpty())
-    {
-        FCMRoomPosition Curr;
-        Q.Dequeue(Curr);
-        const TArray<FCMRoomPosition>* NeighPtr = Adjacency.Find(Curr);
-        if (!NeighPtr) continue;
-        for (const FCMRoomPosition& N : *NeighPtr)
-        {
-            if (!Distance.Contains(N))
-            {
-                Distance.Add(N, Distance[Curr] + 1);
-                Q.Enqueue(N);
-            }
-        }
-    }
-
-    // 리프 노드(차수 1, 시작 제외)를 거리 내림차순으로 정렬
-    TArray<FCMRoomPosition> Leaves;
-    Leaves.Reserve(Adjacency.Num());
-    for (const TPair<FCMRoomPosition, TArray<FCMRoomPosition>>& Pair : Adjacency)
-    {
-        const FCMRoomPosition& Pos = Pair.Key;
-        const int32 Degree = Pair.Value.Num();
-        if (Degree == 1 && !(Pos.X == Start.X && Pos.Y == Start.Y))
-        {
-            Leaves.Add(Pos);
-        }
-    }
-    Leaves.Sort([&Distance](const FCMRoomPosition& A, const FCMRoomPosition& B)
-    {
-        const int32 DA = Distance.Contains(A) ? Distance[A] : MAX_int32;
-        const int32 DB = Distance.Contains(B) ? Distance[B] : MAX_int32;
-        return DA > DB; // 먼 순서대로
-    });
-
-    // 보스/보물 방 배치 결정
-    TSet<FCMRoomPosition> BossPositions;
-    TSet<FCMRoomPosition> TreasurePositions;
-
-    const int32 BossToPlace = FMath::Clamp(DesiredBoss, 0, Leaves.Num());
-    for (int32 i = 0; i < BossToPlace; ++i)
-    {
-        BossPositions.Add(Leaves[i]);
-    }
-    ```
-    
 - **Data-driven 설계 (기획 친화적 구조)**
     
     ![image.png](/assets/images/portfolio_project_arc_images/image%202.png)
@@ -376,11 +322,11 @@ _핵심 기능 항목과 동일한 이미지이며, 이해를 돕기 위해 추�
 
 ![image.png](/assets/images/old/50898fc8-43e3-462e-a6b2-22cee65a5c51-image.png)
 
-| 항목                 | 개선 결과                                                       |
-| -------------------- | --------------------------------------------------------------- |
-| 다중 스폰/중복 오류  | 경계당 Border 액터를 1회만 스폰하고 양쪽 방이 공유하도록 변경   |
-| Entrance 배치 기준   | 트리 연결 정보 대신 격자 좌표(`FCMRoomPosition`) 기반 인접성 사용 |
-| 방향 인덱스 체계     | 상/좌/하/우(0~3) 단일 기준으로 통일                             |
+| 항목                | 개선 결과                                                         |
+| ------------------- | ----------------------------------------------------------------- |
+| 다중 스폰/중복 오류 | 경계당 Border 액터를 1회만 스폰하고 양쪽 방이 공유하도록 변경     |
+| Entrance 배치 기준  | 트리 연결 정보 대신 격자 좌표(`FCMRoomPosition`) 기반 인접성 사용 |
+| 방향 인덱스 체계    | 상/좌/하/우(0~3) 단일 기준으로 통일                               |
 
 #### 해결 과정
 
@@ -427,11 +373,11 @@ _핵심 기능 항목과 동일한 이미지이며, 이해를 돕기 위해 추�
 
 #### 결과
 
-| 항목             | 개선 결과                                                       |
-| ---------------- | --------------------------------------------------------------- |
-| 게임 시작 권한   | Host의 Interact에서만 게임 시작, Remote Client의 Interact는 무시 |
-| 기존 구조 영향   | Interact Ability 구조 변경 없이 NPC 내부에서 필터링             |
-| 연출             | 모든 접속자 화면에서 페이드 아웃 후 함께 맵 이동                |
+| 항목           | 개선 결과                                                        |
+| -------------- | ---------------------------------------------------------------- |
+| 게임 시작 권한 | Host의 Interact에서만 게임 시작, Remote Client의 Interact는 무시 |
+| 기존 구조 영향 | Interact Ability 구조 변경 없이 NPC 내부에서 필터링              |
+| 연출           | 모든 접속자 화면에서 페이드 아웃 후 함께 맵 이동                 |
 
 #### 해결 과정
 

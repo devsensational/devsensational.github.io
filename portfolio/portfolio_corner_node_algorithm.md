@@ -15,13 +15,15 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
     - 프로젝트 통합 및 리딩
     - 문서화
 - **개발 환경**
-    - Unity 2022
+    - Unity 2020.3.25f1
     - C#
     - HoloLens 2/MR
 - **기간:** 2022.01 ~ 2022.12
 - **인원:** 3명
 
-논문 링크
+> 같은 주제로 연구와 캡스톤디자인 프로젝트를 함께 진행했습니다. 논문에는 본인이 구현한 범위(CNA, A\* 적용, HoloLens 2 내비게이션 앱)만 담겨 있으며, 도면 이미지를 Grid 데이터로 변환하는 작업은 팀원이 담당했습니다.
+
+논문 링크 (Applied Sciences, MDPI · SCIE · 2022 JIF 2.7 · 2022.12 게재 · 1저자)
 
 [A Topology Map Generation Algorithm for Optimal Path Finding for Image-Based Maps](https://www.mdpi.com/2076-3417/12/23/12436)
 
@@ -30,8 +32,9 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
 ## 프로젝트 배경
 
 - MR 기반 **실내 재난 모니터링 및 구조 시스템 연구**의 일부
-- 건물 구조 **데이터 부재** → 도면 기반으로 **빠르게 Topology Map 생성** 필요
-- MR HMD의 **낮은 컴퓨팅 파워**, 구조 임무 특성 상 **오류 없는 경로 안내 필수**
+- 기존 방식으로 얻을 수 있는 건물 구조 **데이터가 제한적** → 도면 기반으로 **빠르게 Topology Map 생성** 필요
+- PC에서 Grid 기반 A\* 탐색 시간을 먼저 측정한 결과, PC보다 성능이 낮은 HMD에서 실행하면 **실시간 경로 갱신이 어렵고 배터리 소모가 늘어날 것**으로 판단
+- 구조 임무 특성상 **정확한 경로 안내**가 필요
 - 적절한 Pathfinding 최적화가 요구되어 자체 알고리즘 연구 진행
 
 ---
@@ -40,9 +43,9 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
 
 - **Mixed Reality(MR)** 환경 실내 내비게이션 시스템 개발
 - 자체 개발 **CNA 알고리즘**으로 도면 기반 그래프 생성
-- Pathfinding **노드 수 90% 이상 감소**, A* 기반 경로 탐색
+- A\* 탐색 시 **방문 노드 수 99.82~99.95% 감소**
 - **Unity + MRTK** 기반 MR 안내 시스템 구현
-- **SCI-E 저널 논문 1저자, 경진대회 금상**
+- **MDPI Applied Sciences(SCI-E) 논문 1저자, 경진대회 금상, 특허 등록**
 
 ![image.png](/assets/images/portfolio_corner_node_algorithm_images/image.png)
 
@@ -59,103 +62,32 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
 ![Topology Map 생성 결과물](/assets/images/portfolio_corner_node_algorithm_images/7.png)
 _Topology Map 생성 결과물_
 
-**그래프 정점 개수 감소율**
+**A\* 탐색 시 방문 노드 수 (평균)**
 
-| **Complexity**       | **A***   | **A* With CNA** | **Percentage** |
-| -------------------- | -------- | --------------- | -------------- |
-| **Very Simple**      | 46062.5  | 39              | −99.92%        |
-| **Simple**           | 122703   | 102.2           | −99.92%        |
-| **Intermediate**     | 107462.6 | 147.2           | −99.86%        |
-| **Complicated**      | 176671.1 | 200.8           | −99.89%        |
-| **Very Complicated** | 759311.4 | 380.8           | −99.95%        |
-| **Special Case**     | 143376.6 | 260             | −99.82%        |
+| **Complexity**       | **A\* 단독** | **A\* + CNA** | **감소율** |
+| -------------------- | ------------ | ------------- | ---------- |
+| **Very Simple**      | 46062.5      | 39            | −99.92%    |
+| **Simple**           | 122703       | 102.2         | −99.92%    |
+| **Intermediate**     | 107462.6     | 147.2         | −99.86%    |
+| **Complicated**      | 176671.1     | 200.8         | −99.89%    |
+| **Very Complicated** | 759311.4     | 380.8         | −99.95%    |
+| **Special Case**     | 143376.6     | 260           | −99.82%    |
 
-| 기능               | 설명                                              |
-| ------------------ | ------------------------------------------------- |
-| 이미지 → Grid 변환 | 도면을 이미지 처리해 **타일맵 형태(Grid)**로 변환 |
-| 노드 생성          | 벽 영역에서 **코너 검출 후 노드 생성**            |
-| 그래프 구성        | 생성된 노드들을 연결해 **Topology Map 구축**      |
-| 최적화             | Pathfinding에 필요한 노드 수 **90% 이상 감소**    |
+_방문 노드 수 = Open List + Close List 노드 수의 합, 맵당 시나리오 10개 평균_
+
+| 기능               | 설명                                                                                     |
+| ------------------ | ---------------------------------------------------------------------------------------- |
+| 이미지 → Grid 변환 | 도면 이미지를 2D 배열(Grid)로 변환 (**팀원 담당**, 본인은 변환된 데이터를 입력으로 사용) |
+| 노드 생성          | 벽 영역에서 **코너 검출 후 노드 생성**                                                   |
+| 그래프 구성        | 생성된 노드들을 연결해 **Topology Map 구축**                                             |
+| 최적화             | A\* 탐색 시 방문 노드 수 **99.82~99.95% 감소**                                           |
 
 #### 핵심 포인트
 
-- 일반적인 A* 단독 적용 시 넓은 공간에서 **잘못된 경로** 생성 문제를 해결
-- 도면 기반 그래프 생성(Corner Node Algorithm, CNA)을 통해 **정확한 노드만 추출**
-- 결과적으로 **오류 없는 경로 + 고성능 탐색** 실현
-
-#### 코드 스니펫
-
-```csharp
-// Corner Node Algorithm을 구현하는 클래스의 일부분입니다.
-public class CornerNodeAlgorithmV2
-{
-    private int[,] direction = {
-        {1, 0}, {1, 1}, {0, 1}, {-1, 1},
-        {0, -1}, {-1, -1}, {-1, 0}, {1, -1}
-    };
-    
-    private int width, height;
-
-    private Cell[,] mapData;
-    private List<PathNode> pNodeList = new List<PathNode>();
-    private List<(int, int)> wallList;
-
-    private void createCorner(int x, int y, int beforeDirection)
-    {
-        if (x < 0 || y < 0 || x >= width || y >= height)
-            return; // Out of range
-
-        if (mapData[x, y].Type == Constants.CHECK)
-            return; // Checked cell
-
-        if (mapData[x, y].Type == Constants.OPEN) // is Corner?
-        {
-            int wallCount = 0;
-
-            for (int i = 0; i < 8; i++)
-            {
-                int nextX = x + direction[i, 0];
-                int nextY = y + direction[i, 1];
-
-                if (!(nextX < 0 || nextY < 0 || nextX >= width || nextY >= height))
-                {
-                    if (mapData[nextX, nextY].Type == Constants.WALL ||
-                        mapData[nextX, nextY].Type == Constants.CHECK)
-                    {
-                        wallCount++;
-                    }
-                }
-
-                if (wallCount > 1) break;
-            }
-
-            if (wallCount == 1)
-            {
-                mapData[x, y].Type = Constants.NODE;
-                pNodeList.Add(new PathNode(x, y));
-            }
-
-            return;
-        }
-
-        if (mapData[x, y].Type == Constants.WALL)
-        {
-            mapData[x, y].Type = Constants.CHECK;
-
-            int backward = directionSelector(beforeDirection - 4);
-
-            for (int i = 0; i < 7; i++)
-            {
-                int nextDirection = directionSelector(backward + i);
-                int nextX = x + direction[nextDirection, 0];
-                int nextY = y + direction[nextDirection, 1];
-
-                createCorner(nextX, nextY, nextDirection);
-            }
-        }
-    }
-}
-```
+- 고해상도 도면에서는 모든 픽셀이 노드가 되고, 직선거리 휴리스틱이 직선거리는 가깝지만 막혀 있는 구역 쪽으로 탐색을 끌어당겨 방문 노드가 급증함
+- CNA로 장애물의 코너에만 노드를 만들어 탐색 대상 노드 수를 줄임
+- 검증: 미로 5개 예시에서 정답 경로와 같은 결과, 미로 100개에서 Topology Map 생성과 경로 탐색 성공
+- 한계: 대각선 벽은 픽셀 단위 계단 형태로 저장되어 코너로 인식되므로 노드가 과다 생성되고 전처리 시간이 늘어남
 
 ---
 
@@ -164,122 +96,32 @@ public class CornerNodeAlgorithmV2
 ![생성된 Topology Map에 A\*를 적용한 결과물](/assets/images/portfolio_corner_node_algorithm_images/13.png)
 _생성된 Topology Map에 A\*를 적용한 결과물_
 
-**A\* 단일 적용 vs A\* + 최적화 적용 결과 표**
+**A\* 단독 vs A\* + CNA 경로 탐색 시간 (평균)**
 
-| **Complexity**       | **Preprocessing Time** | **A***    | **A* with CNA** | **Percentage** |
-| -------------------- | ---------------------- | --------- | --------------- | -------------- |
-| **Very Simple**      | 7 ms                   | 75.8 ms   | 1.2 ms          | -90.77%        |
-| **Simple**           | 46.2 ms                | 264.2 ms  | 2.5 ms          | -99.05%        |
-| **Intermediate**     | 90.4 ms                | 183.8 ms  | 2.8 ms          | -98.48%        |
-| **Complicated**      | 280.8 ms               | 775.5 ms  | 6.7 ms          | -99.14%        |
-| **Very Complicated** | 1137.2 ms              | 3342.1 ms | 9.7 ms          | -99.71%        |
-| **Special Case**     | 582.8 ms               | 557.6 ms  | 5.5 ms          | -99.01%        |
+| **Complexity**       | **전처리 시간 (CNA)** | **A\* 단독** | **A\* + CNA** | **탐색 시간 감소율 (전처리 제외)** |
+| -------------------- | --------------------- | ------------ | ------------- | ---------------------------------- |
+| **Very Simple**      | 7 ms                  | 75.8 ms      | 1.2 ms        | -98.42%                            |
+| **Simple**           | 46.2 ms               | 264.2 ms     | 2.5 ms        | -99.05%                            |
+| **Intermediate**     | 90.4 ms               | 183.8 ms     | 2.8 ms        | -98.48%                            |
+| **Complicated**      | 280.8 ms              | 775.5 ms     | 6.7 ms        | -99.14%                            |
+| **Very Complicated** | 1137.2 ms             | 3342.1 ms    | 9.7 ms        | -99.71%                            |
+| **Special Case**     | 582.8 ms              | 557.6 ms     | 5.5 ms        | -99.01%                            |
+
+- 측정 환경: Intel i7-1260P / DDR4 16GB / Intel Iris Xe / Windows 11 21H2 / Unity 2020.3.25f1 (PC). 맵당 시나리오 10개 평균, 출발–도착 직선거리 100 이상, 경로가 없는 시나리오 제외
+- 전처리는 맵마다 1회 수행하고, 건물 구조가 바뀌지 않으면 생성된 Topology Map을 재사용합니다. Special Case처럼 전처리 시간이 A\* 단독 탐색보다 긴 맵도 있어, 같은 맵에서 탐색을 반복할수록 이득이 커집니다.
 
 
-| 항목          | 내용                                                  |
-| ------------- | ----------------------------------------------------- |
-| 탐색 알고리즘 | A* (Straight-line Distance Heuristic)                 |
-| 적용 대상     | CNA로 생성한 Topology Map Graph                       |
-| 효과          | ↓ 노드 수 감소 → **MR HMD에서도 빠른 연산 속도 확보** |
+| 항목          | 내용                                                   |
+| ------------- | ------------------------------------------------------ |
+| 탐색 알고리즘 | A\* (Straight-line Distance Heuristic)                 |
+| 적용 대상     | CNA로 생성한 Topology Map Graph                        |
+| 효과          | PC 측정 기준 탐색 시간 98.42~99.71% 감소 (전처리 제외) |
 
 #### 핵심 포인트
 
 - 목적지까지의 **직선 거리(Heuristic)** 사용
-- 그래프 기반 탐색으로 **경로 오류 제거**
-- 기존 Grid 탐색 대비 **성능 대폭 향상**
-
-#### 코드 스니펫
-
-```csharp
-// A* 알고리즘을 적용하기 위한 메소드입니다.
-private void aStarAlgorithm(AStarNode ptr)
-{
-    do
-    {
-        ptr = addCloseList();
-        addOpenList(ptr);
-        
-        if (ptr.GetNode == targetNode && ptr.GetNode == targetNode)
-        {
-            Debug.Log("Pathfinding Complete (A* + CNA)");
-            while (true)
-            {
-                pathResult.Add(new Vector3(ptr.GetNode.getX(), 0, ptr.GetNode.getY()));
-                if (ptr.GetNode.getX() == startNode.getX() &&
-                    ptr.GetNode.getY() == startNode.getY())
-                {
-                    return;
-                }
-                ptr = ptr.ParentNode;
-            }
-        }
-
-    } while (openList.Count != 0);
-
-    Debug.Log("Can't find path");
-}
-
-// 선택된 노드 중 아직 탐색하지 않은 노드를 리스트에 추가합니다.
-private void addOpenList(AStarNode ptr)
-{
-    for (int i = 0; i < ptr.GetNode.getCnn().Count; i++)
-    {
-        Tuple<PathNode, Vector3> nodeBuffer = ptr.GetNode.getCnn()[i];
-
-        double hScore = Math.Sqrt(
-            Math.Pow(targetNode.getX() - nodeBuffer.Item1.getX(), 2) +
-            Math.Pow(targetNode.getY() - nodeBuffer.Item1.getY(), 2));
-
-        double gScore = Math.Sqrt(
-            Math.Pow(ptr.GetNode.getX() - nodeBuffer.Item1.getX(), 2) +
-            Math.Pow(ptr.GetNode.getY() - nodeBuffer.Item1.getY(), 2)) 
-            + ptr.GScore;
-
-        double fScore = hScore + gScore;
-
-        if (nodeBuffer.Item1.Status == 0) // When a node doesn't belong any list
-        {
-            AStarNode newAStarNode = new AStarNode(nodeBuffer.Item1, hScore, gScore, ptr);
-            openList.Add(newAStarNode);
-
-            nodeBuffer.Item1.Status = 1;
-            nodeBuffer.Item1.AStarNode = newAStarNode;
-            nodeBuffer.Item1.FScore = newAStarNode.FScore;
-        }
-        else if (nodeBuffer.Item1.Status == 1) // When a node belong to open list
-        {
-            if (fScore < nodeBuffer.Item1.FScore)
-            {
-                nodeBuffer.Item1.AStarNode.GScore = gScore;
-                nodeBuffer.Item1.AStarNode.HScore = hScore;
-                nodeBuffer.Item1.AStarNode.FScore = fScore;
-                nodeBuffer.Item1.AStarNode.ParentNode = ptr;
-            }
-        }
-    }
-}
-
-// 탐색한 노드를 리스트에 추가합니다
-private AStarNode addCloseList()
-{
-    if (openList.Count != 0)
-    {
-        AStarNode minNode = openList[0];
-        for (int i = 0; i < openList.Count; i++)
-        {
-            if (minNode.FScore > openList[i].FScore)
-                minNode = openList[i];
-        }
-
-        minNode.GetNode.Status = 2;
-        closeList.Add(minNode);
-        openList.Remove(minNode);
-        return minNode;
-    }
-
-    return null;
-}
-```
+- CNA로 만든 Topology Map 위에서 탐색해 **방문 노드 수를 줄임**
+- Grid 기반 A\* 대비 **탐색 시간 98.42~99.71% 감소** (PC, 전처리 제외)
 
 ---
 
@@ -291,17 +133,17 @@ _목적지 지정_
 ![경로 안내](/assets/images/portfolio_corner_node_algorithm_images/28.png)
 _경로 안내_
 
-| 기술         | 내용                                                         |
-| ------------ | ------------------------------------------------------------ |
-| 엔진         | Unity                                                        |
-| MR Framework | MRTK(Mixed Reality Toolkit)                                  |
-| 기능         | 생성된 경로 위에 **3D 안내 오브젝트**를 실시간 표시          |
-| 결과         | 사용자 시야에 최단경로를 시각적으로 제공하는 내비게이션 구현 |
+| 기술         | 내용                                                                                                      |
+| ------------ | --------------------------------------------------------------------------------------------------------- |
+| 엔진         | Unity                                                                                                     |
+| MR Framework | MRTK(Mixed Reality Toolkit)                                                                               |
+| 기능         | 하단 UI에서 목적지를 선택하고 Start를 누르면 경로를 생성해 **미니맵과 실제 공간 위 가상 오브젝트**로 표시 |
+| 결과         | 사용자가 건물 구조를 몰라도 HoloLens 2 화면의 안내를 따라 이동할 수 있는 내비게이션 구현                  |
 
 #### 핵심 포인트
 
-- Unity 사용으로 **3D 오브젝트 처리 용이**
-- MRTK 활용해 **HMD 제스처·공간 인식 자연스럽게 연동**
+- Unity + MRTK로 HoloLens 2용 앱을 구성하고 목적지 선택 UI 구현
+- 생성된 경로를 **미니맵**과 **실제 공간 위 가상 오브젝트** 두 곳에 표시
 
 ---
 

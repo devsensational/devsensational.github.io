@@ -24,8 +24,6 @@ permalink: /portfolio/portfolio_project_onlyone/
 - **기간:** 2025.09.08 ~ 2025.10.16
 - **인원:** 5명
 
-> 캐릭터, AI 군중, GAS 기반 기믹은 팀원이 담당했으며, 이 페이지에는 본인이 담당한 팀 리딩, UI, 로비·테스트 환경 작업만 담았습니다.
-
 ---
 
 ## 핵심 기능
@@ -47,15 +45,16 @@ permalink: /portfolio/portfolio_project_onlyone/
 
 - **코드 품질 및 병합 관리**
     - 코드 컨벤션과 GitHub 브랜치 규칙을 정하고, 브랜치를 작업 단위로 세분화하도록 유도
-    - PR마다 리뷰 담당자를 지정해 "누군가 하겠지" 식의 리뷰 공백을 없애고, 병합을 직접 관리
+    - PR마다 리뷰 담당자를 지정해 리뷰 공백을 없애고, 병합을 직접 관리
 
     → 회고에서 브랜치 세분화로 **merge 시 conflict가 크게 줄었다**는 평가
 
     ![코드 컨벤션 및 GitHub Rule](/assets/images/old/702fd525-a6a1-4dac-935a-fb7df67909cc-image.png)
+    _팀 규칙 이미지 일부 캡처_
 
 - **프로젝트 초기 세팅**
     - 프로젝트 생성, 폴더 구조 설계, 모듈 시작 시 Native GameplayTags 초기화
-    - 멀티플레이 디버깅을 위해 **NetMode(Server/Client 번호)와 Local/Remote Role, 호출 함수명을 함께 출력하는 로그 매크로(`LOG_NET`) 제작**
+    - 멀티플레이 디버깅을 위해 **NetMode(Server/Client 번호)와 Local/Remote Role, 호출 함수명을 함께 출력하는 로그 매크로(`LOG_NET`) 도입**
 
     ```cpp
     #define LOG_NET(LogCat, Verbosity, Format, ...) UE_LOG(LogCat, Verbosity, TEXT("[%s][%s/%s] %s %s"), \
@@ -151,12 +150,12 @@ permalink: /portfolio/portfolio_project_onlyone/
 - **게임 흐름 UI 통합**
     - 설정(민감도·음량), 준비 시간 도움말, 상호작용 키 안내 및 외곽선 표시, 승리 결과 후 로비 복귀 UI 구현
 
-| 설정 | 준비 시간 |
-| --- | --- |
+| 설정                                                                          | 준비 시간                                                                          |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | ![설정 UI](/assets/images/old/05efb602-4f9d-43de-a656-0fad844f79f4-image.png) | ![준비 시간 UI](/assets/images/old/02cacc3d-0d6a-432f-8301-47d0d8b0c328-image.png) |
 
-| 상호작용 | 승리 결과 |
-| --- | --- |
+| 상호작용                                                                          | 승리 결과                                                                       |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![상호작용 UI](/assets/images/old/af813ae6-32e0-4fd2-8f0f-a245d6c9b254-image.png) | ![승리 결과](/assets/images/old/eceeabba-5cc9-47bb-a545-79443ebacc5f-image.png) |
 
 #### 핵심 기여
@@ -187,8 +186,6 @@ permalink: /portfolio/portfolio_project_onlyone/
     - 구조: `POMainMenuPlayerController` → (접속) → `POServerLobbyPlayerController` ↔ `POLobbyPlayerState` / `POLobbyGameState` / `POServerLobbyWidget`
     - IP 주소와 닉네임을 입력해 접속하고, 접속 중인 플레이어 목록을 실시간 표시
     - 플레이어별 Ready 상태 토글 및 동기화, 입장·퇴장 시 UI 즉시 갱신
-
-    ![로비 실행 Sequence](/assets/images/old/d4649dc3-e8a2-4d11-bc5a-1deaa8c3bd38-image.png)
 
 - **플레이어 슬롯 동적 관리**
     - `TMap<FString, TObjectPtr<UPOServerLobbyPlayerElementWidget>>`으로 플레이어 이름을 키로 슬롯을 관리해 중복 생성 방지
@@ -233,11 +230,11 @@ permalink: /portfolio/portfolio_project_onlyone/
 - 시행착오 끝에 **PlayerState가 게임 시작 전 Lobby에서 이미 생성되고, ServerTravel 이후에도 유지되어 다시 초기화되지 않는다**는 점을 확인
 - 그 결과 상태 변경 이벤트가 위젯보다 먼저 도착하거나, 위젯이 숨겨진 동안 도착해 아래 세 경우에 유실됨
 
-| 문제         | 설명                                       | 결과적 위험                          |
-| ------------ | ------------------------------------------ | ------------------------------------ |
-| 위젯 미생성  | 아직 `CreateWidget` 호출 전                | 이벤트 무시/유실                     |
-| Slate 미구성 | `CreateWidget` 후 `AddToViewport` 이전     | 바인딩 위젯 접근·갱신 불안정         |
-| 비가시 상태  | Collapsed / Hidden 상태에서 이벤트 발생    | 표시 순간 UI와 실제 게임 상태 불일치 |
+| 문제         | 설명                                    | 결과적 위험                          |
+| ------------ | --------------------------------------- | ------------------------------------ |
+| 위젯 미생성  | 아직 `CreateWidget` 호출 전             | 이벤트 무시/유실                     |
+| Slate 미구성 | `CreateWidget` 후 `AddToViewport` 이전  | 바인딩 위젯 접근·갱신 불안정         |
+| 비가시 상태  | Collapsed / Hidden 상태에서 이벤트 발생 | 표시 순간 UI와 실제 게임 상태 불일치 |
 
 #### 해결 방법
 **1. 컨트롤러에서 이벤트를 먼저 수신**

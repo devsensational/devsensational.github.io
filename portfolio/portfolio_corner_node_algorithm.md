@@ -20,12 +20,8 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
     - HoloLens 2/MR
 - **기간:** 2022.01 ~ 2022.12
 - **인원:** 3명
-
-> 같은 주제로 연구와 캡스톤디자인 프로젝트를 함께 진행했습니다. 논문에는 본인이 구현한 범위(CNA, A\* 적용, HoloLens 2 내비게이션 앱)만 담겨 있으며, 도면 이미지를 Grid 데이터로 변환하는 작업은 팀원이 담당했습니다.
-
-논문 링크 (Applied Sciences, MDPI · SCIE · 2022 JIF 2.7 · 2022.12 게재 · 1저자)
-
-[A Topology Map Generation Algorithm for Optimal Path Finding for Image-Based Maps](https://www.mdpi.com/2076-3417/12/23/12436)
+- **논문 링크:** [A Topology Map Generation Algorithm for Optimal Path Finding for Image-Based Maps](https://www.mdpi.com/2076-3417/12/23/12436)
+(Applied Sciences, MDPI · SCIE · 2022 JIF 2.7 · 2022.12 게재 · 1저자)
 
 ---
 
@@ -39,7 +35,7 @@ permalink: /portfolio/portfolio_corner_node_algorithm/
 
 ---
 
-## 전체 요약 (핵심 키워드)
+## 전체 요약
 
 - **Mixed Reality(MR)** 환경 실내 내비게이션 시스템 개발
 - 자체 개발 **CNA 알고리즘**으로 도면 기반 그래프 생성

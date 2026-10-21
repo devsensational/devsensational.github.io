@@ -112,6 +112,18 @@ title: PORTFOLIO
 
 <!-- 포트폴리오 아이템 2 -->
 <div class="pf-card">
+  <a href="/portfolio/portfolio_project_onlyone/" class="pf-click-overlay"></a>
+  <div class="pf-img-area">
+    <img src="/assets/images/old/90498b9b-d069-416b-9644-123f7013d77d-image.png" alt="Project OnlyOne thumbnail">
+  </div>
+  <div class="pf-text-area">
+    <h3 class="pf-title">Project OnlyOne</h3>
+    <p class="pf-desc">Unreal 5, 팀장, UI 전체 설계, 서버 로비, 네트워크 동기화 문제 해결 등</p>
+  </div>
+</div>
+
+<!-- 포트폴리오 아이템 3 -->
+<div class="pf-card">
   <a href="/portfolio/portfolio_corner_node_algorithm/" class="pf-click-overlay"></a>
   <div class="pf-img-area">
     <img src="/assets/images/portfolio_corner_node_algorithm_images/28.png" alt="MR 환경 내비게이션 썸네일">
@@ -122,7 +134,7 @@ title: PORTFOLIO
   </div>
 </div>
 
-<!-- 포트폴리오 아이템 3 -->
+<!-- 포트폴리오 아이템 4 -->
 <div class="pf-card">
   <a href="/portfolio/portfolio_ax/" class="pf-click-overlay"></a>
   <div class="pf-img-area">
